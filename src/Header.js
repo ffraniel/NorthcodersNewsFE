@@ -1,0 +1,23 @@
+import React, { Component } from 'react';
+import Login from './Login';
+import headerCSS from './Header.css';
+
+class Header extends React.Component {
+    render () {
+        return (
+            <div className="header">
+                <div className="topHeader">
+                    <h1>Saiddit News</h1>
+                </div>
+                <Login />
+                <div className="bottomHeader">
+                    <div className="headImgCont">
+                        <img id="headerImage" src="https://www.redditstatic.com/listingsignupbar-orbit-1.png" alt="reddit style header background" />
+                    </div>
+                </div>
+            </div>
+        )
+    }
+}
+
+export default Header;
