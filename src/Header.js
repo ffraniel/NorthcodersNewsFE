@@ -7,9 +7,11 @@ class Header extends React.Component {
         return (
             <div className="header">
                 <div className="topHeader">
-                    <h1>Saiddit News</h1>
+                    <div>
+                        <h1>Saiddit News</h1>
+                    </div>
+                    <Login />
                 </div>
-                <Login />
                 <div className="bottomHeader">
                     <div className="headImgCont">
                         <img id="headerImage" src="https://www.redditstatic.com/listingsignupbar-orbit-1.png" alt="reddit style header background" />

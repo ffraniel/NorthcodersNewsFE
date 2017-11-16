@@ -1,5 +1,19 @@
+.header {
+    /* display:block; */
+}
+
 #headerImage {
     margin:0;
     padding:0;
     width:100%;
+}
+
+.topHeader h1 {
+    display:block-inline;
+    position: relative;
+    float:left;
+}
+
+.bottomHeader #headerImage {
+    padding-top:1rem;
 }

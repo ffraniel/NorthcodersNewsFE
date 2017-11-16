@@ -8,6 +8,7 @@ class ListItem extends React.Component {
                 <div className="rankAndVote">
                     <h1>1</h1>
                     <a href="#"><p>up</p></a>
+                    <p>12.6k</p>
                     <a href="#"><p>down</p></a>
                 </div>
                 <div className="listItem">
