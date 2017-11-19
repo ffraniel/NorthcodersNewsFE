@@ -1,17 +1,37 @@
 import React, { Component } from 'react';
+import {BrowserRouter, Route, Switch, Link, NavLink} from 'react-router-dom';
 import './App.css';
 import Header from './Header';
 import List from './List';
+import Article from './Article';
+import Comment from './Comment';
+import Main from './Main';
+import NoMatch from './NoMatch';
 
 class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state=({
+      loggedIn:false
+    })
+  }
   render() {
     return (
-      <div className="App">
+      <BrowserRouter>
+        <div>
         <Header />
-        <List />
-      </div>
+        <Switch>
+          <Route exact path="/" component={Main} />
+          <Route path="/:articleID/comments" component={Comment} />
+          <Route path="/article/:articleID" component={Article} />
+          <Route default component={NoMatch}/>
+        </Switch>
+        </div>
+
+      </BrowserRouter>
     );
   }
 }
+
 
 export default App;

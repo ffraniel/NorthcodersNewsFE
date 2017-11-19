@@ -1,11 +1,8 @@
 import React, { Component } from 'react';
-import LoadingCompCSS from './LoadingComp.css';
+import './LoadingComp.css';
 
 class LoadingComp extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-    render () {
+        render () {
         return (
             <div>
                 <h1>LOADING!!!!!</h1>

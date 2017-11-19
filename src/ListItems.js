@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Listcss from './List.css';
+import {BrowserRouter, Route, Switch, Link, NavLink} from 'react-router-dom';
 
 class ListItem extends React.Component {
     constructor(props) {
@@ -11,7 +12,7 @@ class ListItem extends React.Component {
     }
     render(){
         return ( 
-            <div className="listEntry">
+            <div className="listIterator">
             {this.state.posts.map((post, index) => {            
                 return (
                     <div className="listEntry">
@@ -27,9 +28,10 @@ class ListItem extends React.Component {
                         </a>
                         <p className="authoredBy">Submitted 6 hours ago by <a href="#">{post.created_by}</a></p>
                         <div className="listLinks">
-                            <a href="#">
-                                <p>{post.comments}</p>
-                            </a>
+                            <Link to={`/{post.id}/comments`}>
+                                <p>{post.comments} comments</p>
+                               
+                            </Link>
                             <a href="#">
                                 <p>share</p>
                             </a>

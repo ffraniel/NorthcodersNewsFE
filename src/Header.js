@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import Login from './Login';
-import headerCSS from './Header.css';
+import './Header.css';
 
 class Header extends React.Component {
+
     render () {
         return (
             <div className="header">
@@ -11,7 +12,10 @@ class Header extends React.Component {
                         <h1>Saiddit News</h1>
                     </div>
                     <Login />
+
                 </div>
+                
+                
                 <div className="bottomHeader">
                     <div className="headImgCont">
                         <img id="headerImage" src="https://www.redditstatic.com/listingsignupbar-orbit-1.png" alt="reddit style header background" />
@@ -20,6 +24,7 @@ class Header extends React.Component {
             </div>
         )
     }
+
 }
 
 export default Header;

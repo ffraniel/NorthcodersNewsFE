@@ -1,0 +1,34 @@
+.list a {
+    color:rgb(80, 75, 75);
+}
+
+.authoredBy {
+    color:grey;
+  }
+.authoredBy a {
+    color: rgb(108, 108, 170);
+}
+.listLinks a p {
+    display:inline;
+    padding-right: 10px;
+}
+
+.commentEntry {
+    border:solid gainsboro 0.5px;
+    display:block;
+
+}
+.commentEntry .rankAndVote {
+    /* border:solid gainsboro 0.5px; */
+    display:inline-block;
+    position: relative;
+    padding:0.5rem;
+
+}
+.commentEntry .commentItem {
+    /* border:solid gainsboro 0.5px; */
+    position: relative;
+    display:inline-block;
+    padding:0.5rem;
+    height:100%;
+}
