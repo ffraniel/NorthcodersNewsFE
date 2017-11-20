@@ -27,9 +27,9 @@ class Comment extends React.Component {
                     {!this.state.loading && <ArticleComments comments={this.state.comments}/>}
             </div>
         )};
-
+        // <Route path="/:articleID/comments" component={Comment} />
     getComments () {
-        return fetch ('https://northcoders-news-api.herokuapp.com/api/articles/583412935905f02e4c8e6e06/comments')
+        return fetch (`https://northcoders-news-api.herokuapp.com/api/articles/${this.props.match.params.articleID}/comments`)
         .then((resBuffer)=>{
             return resBuffer.json()
         })
