@@ -1,7 +1,3 @@
-.list a {
-    color:rgb(80, 75, 75);
-}
-
 .authoredBy {
     color:grey;
   }
@@ -16,14 +12,13 @@
 .listEntry {
     border:solid gainsboro 0.5px;
     display:block;
-
 }
+
 .listEntry .rankAndVote {
     /* border:solid gainsboro 0.5px; */
     display:inline-block;
     position: relative;
     padding:0.5rem;
-
 }
 .listEntry .listItem {
     /* border:solid gainsboro 0.5px; */
