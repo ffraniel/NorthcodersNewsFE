@@ -4,6 +4,7 @@ import './App.css';
 import Header from './Header';
 import List from './List';
 import Article from './Article';
+import TopicArticles from './TopicArticles';
 import Comment from './Comment';
 import Main from './Main';
 import NoMatch from './NoMatch';
@@ -23,7 +24,8 @@ class App extends React.Component {
         <Switch>
           <Route exact path="/" component={Main} />
           <Route path="/:articleID/comments" component={Comment} />
-          <Route path="/article/:articleID" component={Article} />
+          <Route path="/:articleID/article" component={Article} />
+          <Route path="/topics/:topic/articles" component={TopicArticles} />
           <Route default component={NoMatch}/>
         </Switch>
         </div>
