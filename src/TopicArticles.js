@@ -18,6 +18,11 @@ class TopicArticles extends React.Component {
     componentDidMount() {
         this.getTopicArticles();
     }
+    componentWillReceiveProps() {
+        this.getTopicArticles();
+    }
+    
+    
 
     render () {
         return (

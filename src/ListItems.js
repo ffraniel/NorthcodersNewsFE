@@ -10,6 +10,7 @@ class ListItem extends React.Component {
       posts: this.props.posts
     };
   }
+
   render() {
     return (
       <div className="listIterator">
@@ -27,16 +28,19 @@ class ListItem extends React.Component {
                 </a>
               </div>
               <div className="listItem">
-                <Link to={`/${post._id}/comments`}>
+                <Link to={`/${post._id}/article`}>
                   <h2 className="artTitle">{post.title}</h2>
                 </Link>
                 <p className="authoredBy">
                   Submitted 6 hours ago by <a href="#">{post.created_by}</a>
                 </p>
                 <div className="listLinks">
-                  <Link to={`/{post.id}/comments`}>
+                  <Link to={`/${post._id}/comments`}>
                     <p>{post.comments} comments</p>
                   </Link>
+                  <a href="#">
+                    <p>reply</p>
+                  </a>
                   <a href="#">
                     <p>share</p>
                   </a>
