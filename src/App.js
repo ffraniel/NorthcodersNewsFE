@@ -27,8 +27,8 @@ class App extends React.Component {
           <Route path="/:articleID/comments" component={Comment} />
           <Route path="/:articleID/article" component={Article} />
           <Route path="/topics/:topic/articles" component={TopicArticles} />
-          <Route default component={NoMatch}/>
           <Route path="/users/:userID" component={Profile} />
+          <Route default component={NoMatch}/>
         </Switch>
         </div>
 

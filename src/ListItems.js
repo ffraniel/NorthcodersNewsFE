@@ -6,15 +6,12 @@ import TopicArticles from './TopicArticles';
 class ListItem extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      posts: this.props.posts
-    };
   }
 
   render() {
     return (
       <div className="listIterator">
-        {this.state.posts.map((post, index) => {
+        {this.props.posts.map((post, index) => {
           return (
             <div className="listEntry">
               <div className="rankAndVote">

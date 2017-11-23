@@ -18,11 +18,16 @@ class TopicArticles extends React.Component {
         this.getTopicArticles = this.getTopicArticles.bind(this);
     }
     componentDidMount() {
-        this.getTopicArticles();
+        const currentTopic = this.props.match.params.topic.toLowerCase();
+        this.getTopicArticles(currentTopic);
     }
 
-    componentWillReceiveProps () {
-        this.getTopicArticles();
+    componentWillReceiveProps (nextProps) {
+        const currentTopic = this.props.match.params.topic.toLowerCase();
+        const nextTopic = nextProps.match.params.topic.toLowerCase();
+        if (currentTopic !== nextTopic) {
+            this.getTopicArticles(nextTopic)
+        }
       }
 
     render () {
@@ -34,8 +39,8 @@ class TopicArticles extends React.Component {
             </div>
         )};  
         
-    getTopicArticles () {
-        return fetch (`https://northcoders-news-api.herokuapp.com/api/topics/${this.props.match.params.topic.toLowerCase()}/articles`)
+    getTopicArticles (topicName) {
+        return fetch (`https://northcoders-news-api.herokuapp.com/api/topics/${topicName}/articles`)
         .then((resBuffer)=>{
             return resBuffer.json()
         })
