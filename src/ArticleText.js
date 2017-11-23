@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {BrowserRouter, Route, Switch, Link, NavLink} from 'react-router-dom';
 import './ArticleText.css';
 
 class ArticleText extends React.Component {
@@ -7,24 +8,22 @@ class ArticleText extends React.Component {
     }
     render (){
         return (
-            <div>
-            {/* {this.props.articles.map((article)=>{
-                return (
-                    <div className="articleBox">
+                <div className="articleBox">
                     <div className="rankAndVote">
                       <a href="#">
                         <p>up</p>
                       </a>
-                      <p>{article.votes}</p>
+                      <p>{this.props.article.votes}</p>
                       <a href="#">
                         <p>down</p>
                       </a>
                     </div>
                     <div className="articleBody">
-                      <p>{article.body}</p>
-                      <a href="#" className="authoredBy">
-                        <h4>Submitted 10 hours ago by {article.created_by}</h4>
-                      </a>
+                      <h2 className="articleTitle">{this.props.article.title}</h2>
+                      <p>{this.props.article.body}</p>
+                      <p className="authoredBy">
+                      Submitted 6 hours ago by <Link to={`/users/${this.props.article.created_by}`}>{this.props.article.created_by}</Link>
+                    </p>
                       <div className="listLinks">
                         <a href="#">
                           <p>permalink</p>
@@ -44,10 +43,6 @@ class ArticleText extends React.Component {
                       </div>
                     </div>
                   </div>
-                )
-            })} */}
-            <h1>this should have props</h1>
-            </div>
         )
     }
 }

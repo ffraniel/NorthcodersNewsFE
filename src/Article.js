@@ -7,7 +7,8 @@ class Article extends React.Component {
     constructor(props) {
         super(props)
         this.state=({
-            articles:[]        
+            article:{},
+            loading:true        
         })
         this.getArticles = this.getArticles.bind(this);
     }
@@ -18,10 +19,8 @@ class Article extends React.Component {
     render () {
         return (
             <div>
-    ///////////////////////////////////////////////////////////////////////////////////////////////////////////
-                <h2>{this.props.match.params.articleID}</h2>
                 {this.state.loading && <LoadingComp />}
-                {!this.state.loading && <ArticleText articles={this.state.articles}/>}
+                {!this.state.loading && <ArticleText article={this.state.article}/>}
             </div>
         )
     }
@@ -29,11 +28,11 @@ class Article extends React.Component {
     getArticles () {
         return fetch (`https://northcoders-news-api.herokuapp.com/api/articles/${this.props.match.params.articleID}`)
         .then((resBuffer)=>{
-            return resBuffer.json()
+            return resBuffer.json();
         })
         .then((res)=>{
             this.setState({
-                articles:res.articles,
+                article:res,
                 loading:false               
             })
         })
