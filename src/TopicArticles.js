@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import './TopicArticles.css';
 import Search from './Search';
 import LoadingComp from './LoadingComp';
-import TopicArticlesIterator from './TopicArticlesIterator';
-
 import ListItems from './ListItems';
 const bodyParser = require('body-parser');
 

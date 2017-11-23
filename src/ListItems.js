@@ -29,7 +29,7 @@ class ListItem extends React.Component {
                   <h2 className="artTitle">{post.title}</h2>
                 </Link>
                 <p className="authoredBy">
-                  Submitted 6 hours ago by <a href="#">{post.created_by}</a>
+                  Submitted 6 hours ago by <Link to={`/users/${post.created_by}`}>{post.created_by}</Link>
                 </p>
                 <div className="listLinks">
                   <Link to={`/${post._id}/comments`}>

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import {BrowserRouter, Route, Switch, Link, NavLink} from 'react-router-dom';
 import "./ArticleComments.css";
 import Search from "./Search";
 import LoadingComp from "./LoadingComp";
@@ -31,9 +32,9 @@ class ArticleComments extends React.Component {
               </div>
               <div className="commentItem">
                 <p>{comment.body}</p>
-                <a href="#" className="authoredBy">
-                  <h4>Submitted 6 hours ago by {comment.created_by}</h4>
-                </a>
+                <p className="authoredBy">
+                Submitted 6 hours ago by <Link to={`/users/${comment.created_by}`}>{comment.created_by}</Link>
+              </p>
                 <div className="listLinks">
                   <a href="#">
                     <p>permalink</p>
