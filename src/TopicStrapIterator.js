@@ -9,12 +9,12 @@ class TopicStrapIterator extends React.Component {
     render() {
         return (
             <div className="topicStrapIterator">
-                <Link to={`/`}><h4>All</h4></Link>
+                <NavLink topicActive={ {color:'green'} } to={`/`}><h4>All</h4></NavLink>
                 {this.props.topics.map((topic) => {
                     return (
-                    <Link to={`/topics/${topic.title}/articles`}>
+                    <NavLink topicActive={ {color:'green'} } to={`/topics/${topic.title}/articles`}>
                         <h4>{topic.title}</h4>
-                    </Link>
+                    </NavLink>
                     )
                 })}
             </div>
