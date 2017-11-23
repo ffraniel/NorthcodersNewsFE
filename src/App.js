@@ -8,6 +8,7 @@ import TopicArticles from './TopicArticles';
 import Comment from './Comment';
 import Main from './Main';
 import NoMatch from './NoMatch';
+import Profile from './Profile';
 
 class App extends React.Component {
   constructor(props) {
@@ -27,6 +28,7 @@ class App extends React.Component {
           <Route path="/:articleID/article" component={Article} />
           <Route path="/topics/:topic/articles" component={TopicArticles} />
           <Route default component={NoMatch}/>
+          <Route path="/users/:userID" component={Profile} />
         </Switch>
         </div>
 

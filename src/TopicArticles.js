@@ -3,13 +3,15 @@ import './TopicArticles.css';
 import Search from './Search';
 import LoadingComp from './LoadingComp';
 import TopicArticlesIterator from './TopicArticlesIterator';
+
+import ListItems from './ListItems';
 const bodyParser = require('body-parser');
 
 class TopicArticles extends React.Component {
     constructor(props) {
         super(props);
         this.state = ({
-            topicArticles:[],
+            posts:[],
             searchVal:'',
             loading:true
         })
@@ -18,18 +20,17 @@ class TopicArticles extends React.Component {
     componentDidMount() {
         this.getTopicArticles();
     }
-    componentWillReceiveProps() {
+
+    componentWillReceiveProps () {
         this.getTopicArticles();
-    }
-    
-    
+      }
 
     render () {
         return (
             <div className="topicArticlesList">
                 <Search />
                     {this.state.loading && <LoadingComp />}
-                    {!this.state.loading && <TopicArticlesIterator topicArticles={this.state.topicArticles}/>}
+                    {!this.state.loading && <ListItems posts={this.state.posts}/>}
             </div>
         )};  
         
@@ -40,7 +41,7 @@ class TopicArticles extends React.Component {
         })
         .then((res)=>{
             this.setState({
-                topicArticles:res.articles,
+                posts:res.articles,
                 loading:false,                
             })
         })

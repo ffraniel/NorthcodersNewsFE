@@ -14,9 +14,6 @@ class ArticleComments extends React.Component {
     };
   }
 
-
-
-
   render() {
     return (
       <div className="commentsIterator">

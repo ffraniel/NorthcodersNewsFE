@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import Listcss from "./List.css";
 import { BrowserRouter, Route, Switch, Link, NavLink } from "react-router-dom";
+import TopicArticles from './TopicArticles';
 
 class ListItem extends React.Component {
   constructor(props) {
     super(props);
-
     this.state = {
       posts: this.props.posts
     };
@@ -62,4 +62,6 @@ class ListItem extends React.Component {
     );
   }
 }
+
+
 export default ListItem;
