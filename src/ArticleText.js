@@ -10,13 +10,9 @@ class ArticleText extends React.Component {
     return (
       <div className="articleBox">
         <div className="rankAndVote">
-          <a href="#">
-            <p>up</p>
-          </a>
+          <button>Up</button>
           <p>{this.props.article.votes}</p>
-          <a href="#">
-            <p>down</p>
-          </a>
+          <button>Down</button>
         </div>
         <div className="articleBody">
           <h2 className="articleTitle">{this.props.article.title}</h2>

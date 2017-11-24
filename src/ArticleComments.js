@@ -22,13 +22,9 @@ class ArticleComments extends React.Component {
           return (
             <div className="commentEntry">
               <div className="rankAndVote">
-                <a href="#">
-                  <p>up</p>
-                </a>
+                <button>Up</button>
                 <p>{comment.votes}</p>
-                <a href="#">
-                  <p>down</p>
-                </a>
+                <button>Down</button>
               </div>
               <div className="commentItem">
                 <p>{comment.body}</p>
