@@ -21,6 +21,7 @@ class Article extends React.Component {
             <div>
                 {this.state.loading && <LoadingComp />}
                 {!this.state.loading && <ArticleText article={this.state.article}/>}
+
             </div>
         )
     }

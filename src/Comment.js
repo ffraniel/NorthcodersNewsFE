@@ -3,6 +3,7 @@ import './Comment.css';
 import Search from './Search';
 import LoadingComp from './LoadingComp';
 import ArticleComments from './ArticleComments';
+import CommentForm from './CommentForm';
 const bodyParser = require('body-parser');
 
 class Comment extends React.Component {
@@ -24,7 +25,8 @@ class Comment extends React.Component {
             <div className="commentsList">
                 <Search />
                     {this.state.loading && <LoadingComp />}
-                    {!this.state.loading && <ArticleComments comments={this.state.comments}/>}
+                    {!this.state.loading && <ArticleComments comments={this.state.comments} getComments={this.getComments} articleID={this.props.match.params.articleID}/>}
+                <CommentForm articleID={this.props.match.params.articleID}/>
             </div>
         )};
     getComments () {
