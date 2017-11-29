@@ -15,6 +15,7 @@ class Comment extends React.Component {
             loading:true
         })
         this.getComments = this.getComments.bind(this);
+        this.addComment =this.addComment.bind(this);
     }
     componentDidMount() {
         this.getComments();
@@ -25,8 +26,9 @@ class Comment extends React.Component {
             <div className="commentsList">
                 <Search />
                     {this.state.loading && <LoadingComp />}
-                    {!this.state.loading && <ArticleComments comments={this.state.comments} getComments={this.getComments} articleID={this.props.match.params.articleID}/>}
-                <CommentForm articleID={this.props.match.params.articleID} getComments={this.getComments}/>
+                    {!this.state.loading && <ArticleComments comments={this.state.comments} />}
+                
+                    <CommentForm addComment={this.addComment}  articleID={this.props.match.params.articleID}/>
             </div>
         )};
     getComments () {
@@ -39,11 +41,37 @@ class Comment extends React.Component {
                 comments:res.comments,
                 loading:false,                
             })
+            // console.log(this.state.comments)
         })
         .catch(console.log)
     }
 
+    addComment(comment, articleID) {
+        return fetch (`https://northcoders-news-api.herokuapp.com/api/articles/${articleID}/comments`, 
+        { 
+        method:"post", 
+        body: comment,
+        headers: {
+          "Content-Type": "application/json"
+            }
+        })
+        .then((resBuffer)=>{
+            return resBuffer.json();
+        })
+        .then((res)=>{
+            console.log("*********************************************")
+            console.log(this.state.comments)
+            currentCommentState = this.state.comments;
+            currentCommentState.push(res.comment);
+            this.setState({
+                comment:currentCommentState
+            })
+            console.log(this.state.comments);
+        })
+        .catch(console.log);
+    }
+
 
 };
-
+var currentCommentState;
 export default Comment;

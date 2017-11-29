@@ -7,9 +7,8 @@ class CommentForm extends React.Component {
     constructor(props) {
         super(props);
         this.state=({
-            value: 'Submit your comment here...',
-            articleID:this.props.articleID
-
+            value: '...',
+            articleID: this.props.articleID
         });
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -31,26 +30,11 @@ class CommentForm extends React.Component {
     }
     handleSubmit(event) {
         event.preventDefault();
-        this.addComment(`{"comment": "${this.state.value}"}`)
+        this.props.addComment(`{"comment": "${this.state.value}"}`, this.state.articleID);
+        this.setState({value:''})
     }
 
-    addComment(comment) {
-        return fetch (`https://northcoders-news-api.herokuapp.com/api/articles/${this.state.articleID}/comments`, 
-        { 
-        method:"post", 
-        body: comment,
-        headers: {
-          "Content-Type": "application/json"
-            }
-        })
-        .then((resBuffer)=>{
-            return resBuffer.json();
-        })
-        .then((res)=>{
-            this.props.getComments();
-        })
-        .catch(console.log);
-    }
+
 
 }
 
