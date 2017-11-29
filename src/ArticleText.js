@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { BrowserRouter, Route, Switch, Link, NavLink } from "react-router-dom";
 import "./ArticleText.css";
+import RankAndVote from './RankAndVote';
 
 class ArticleText extends React.Component {
   constructor(props) {
@@ -9,11 +10,7 @@ class ArticleText extends React.Component {
   render() {
     return (
       <div className="articleBox">
-        <div className="rankAndVote">
-          <button>Up</button>
-          <p>{this.props.article.votes}</p>
-          <button>Down</button>
-        </div>
+        <RankAndVote post={this.props.article} index={0}/>
         <div className="articleBody">
           <h2 className="articleTitle">{this.props.article.title}</h2>
           <Link to={`/topics/${this.props.article.belongs_to}/articles`}>

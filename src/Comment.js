@@ -26,7 +26,7 @@ class Comment extends React.Component {
                 <Search />
                     {this.state.loading && <LoadingComp />}
                     {!this.state.loading && <ArticleComments comments={this.state.comments} getComments={this.getComments} articleID={this.props.match.params.articleID}/>}
-                <CommentForm articleID={this.props.match.params.articleID}/>
+                <CommentForm articleID={this.props.match.params.articleID} getComments={this.getComments}/>
             </div>
         )};
     getComments () {

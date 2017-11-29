@@ -5,6 +5,7 @@ import Search from "./Search";
 import LoadingComp from "./LoadingComp";
 import Comment from "./Comment";
 import NoMatch from "./NoMatch";
+import RankAndVote from './RankAndVote';
 
 class ArticleComments extends React.Component {
   constructor(props) {
@@ -18,14 +19,10 @@ class ArticleComments extends React.Component {
   render() {
     return (
       <div className="commentsIterator">
-        {this.state.comments.map(comment => {
+        {this.state.comments.map((comment, index) => {
           return (
             <div className="commentEntry">
-              <div className="rankAndVote">
-                <button>Up</button>
-                <p>{comment.votes}</p>
-                <button>Down</button>
-              </div>
+              <RankAndVote post={comment} index={index}/>
               <div className="commentItem">
                 <p>{comment.body}</p>
                 <p className="authoredBy">
