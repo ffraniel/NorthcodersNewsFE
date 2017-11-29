@@ -41,7 +41,6 @@ class Comment extends React.Component {
                 comments:res.comments,
                 loading:false,                
             })
-            // console.log(this.state.comments)
         })
         .catch(console.log)
     }
@@ -59,14 +58,11 @@ class Comment extends React.Component {
             return resBuffer.json();
         })
         .then((res)=>{
-            console.log("*********************************************")
-            console.log(this.state.comments)
             currentCommentState = this.state.comments;
             currentCommentState.push(res.comment);
             this.setState({
                 comment:currentCommentState
             })
-            console.log(this.state.comments);
         })
         .catch(console.log);
     }
