@@ -9,7 +9,6 @@ class ArticleText extends React.Component {
   }
   render() {
     return (
-
       <div className="articleBox">
         <RankAndVote post={this.props.article} index={0}/>
         <div className="articleBody">
@@ -26,23 +25,8 @@ class ArticleText extends React.Component {
           </p>
           <div className="listLinks">
           <Link to={`/${this.props.article._id}/comments`}>
-                    <p>{this.props.comments.length} comments</p>
+                    <p>{this.props.comments.length} comments - Reply</p>
             </Link>
-            <a href="#">
-              <p>permalink</p>
-            </a>
-            <a href="#">
-              <p>embed</p>
-            </a>
-            <a href="#">
-              <p>save</p>
-            </a>
-            <a href="#">
-              <p>report</p>
-            </a>
-            <a href="#">
-              <p>reply</p>
-            </a>
           </div>
         </div>
       </div>

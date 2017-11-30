@@ -28,23 +28,7 @@ class ArticleComments extends React.Component {
                 <p className="authoredBy">
                 Submitted 6 hours ago by <Link to={`/users/${comment.created_by}`}>{comment.created_by}</Link>
               </p>
-                <div className="listLinks">
-                  <a href="#">
-                    <p>permalink</p>
-                  </a>
-                  <a href="#">
-                    <p>embed</p>
-                  </a>
-                  <a href="#">
-                    <p>save</p>
-                  </a>
-                  <a href="#">
-                    <p>report</p>
-                  </a>
-                  <a href="#">
-                    <p>reply</p>
-                  </a>
-                </div>
+
               </div>
             </div>
           );

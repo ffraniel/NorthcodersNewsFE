@@ -9,6 +9,7 @@ class ListItem extends React.Component {
     super(props);
   }
 
+
   render() {
     return (
       <div className="listIterator">
@@ -28,23 +29,8 @@ class ListItem extends React.Component {
                 </p>
                 <div className="listLinks">
                   <Link to={`/${post._id}/comments`}>
-                    <p>{post.comments} comments</p>
+                    <p>{post.comments} comments - Reply</p>
                   </Link>
-                  <a href="#">
-                    <p>reply</p>
-                  </a>
-                  <a href="#">
-                    <p>share</p>
-                  </a>
-                  <a href="#">
-                    <p>save</p>
-                  </a>
-                  <a href="#">
-                    <p>hide</p>
-                  </a>
-                  <a href="#">
-                    <p>report</p>
-                  </a>
                 </div>
               </div>
             </div>

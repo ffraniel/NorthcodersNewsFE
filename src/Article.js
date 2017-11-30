@@ -24,7 +24,6 @@ class Article extends React.Component {
             <div>
                 {this.state.loading && <LoadingComp />}
                 {!this.state.loading && <ArticleText article={this.state.article} comments={this.state.comments}/>}
-
             </div>
         )
     }
@@ -56,7 +55,6 @@ class Article extends React.Component {
         })
         .catch(console.log)
     }
-
 }
 
 export default Article;
