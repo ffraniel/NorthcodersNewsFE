@@ -7,7 +7,7 @@ class CommentForm extends React.Component {
     constructor(props) {
         super(props);
         this.state=({
-            value: '...',
+            value: '',
             articleID: this.props.articleID
         });
         this.handleChange = this.handleChange.bind(this);
@@ -33,8 +33,6 @@ class CommentForm extends React.Component {
         this.props.addComment(`{"comment": "${this.state.value}"}`, this.state.articleID);
         this.setState({value:''})
     }
-
-
 
 }
 

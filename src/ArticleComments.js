@@ -5,7 +5,7 @@ import Search from "./Search";
 import LoadingComp from "./LoadingComp";
 import Comment from "./Comment";
 import NoMatch from "./NoMatch";
-import RankAndVote from './RankAndVote';
+import CommentsRankAndVote from './CommentsRankAndVote';
 
 class ArticleComments extends React.Component {
   constructor(props) {
@@ -22,7 +22,7 @@ class ArticleComments extends React.Component {
         {this.state.comments.map((comment, index) => {
           return (
             <div className="commentEntry">
-              <RankAndVote post={comment} index={index}/>
+              <CommentsRankAndVote post={comment} index={index}/>
               <div className="commentItem">
                 <p>{comment.body}</p>
                 <p className="authoredBy">

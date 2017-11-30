@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './List.css';
 import ListItems from './ListItems';
-import Search from './Search';
 import LoadingComp from './LoadingComp';
 const bodyParser = require('body-parser');
 
@@ -22,7 +21,6 @@ class List extends React.Component {
     render () {
         return (
             <div className="mainList">
-                <Search />
                     {this.state.loading && <LoadingComp />}
                     {!this.state.loading && <ListItems posts={this.state.posts}/>}
             </div>
@@ -42,13 +40,6 @@ class List extends React.Component {
         .catch(console.log)
     }
 
-    // searchFilter(value) {
-    //     const filteredPosts = this.state.posts.filter((emoji) => {
-    //       const input = new RegExp(value,'ig');
-    //       return input.test(emoji.keywords);
-    //     })
-    //     this.setState({posts:filteredList})
-    //   }
 }
 
 export default List;

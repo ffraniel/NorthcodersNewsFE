@@ -5,7 +5,6 @@ import LoadingComp from './LoadingComp';
 import TopicStrapIterator from './TopicStrapIterator';
 const bodyParser = require('body-parser');
 
-
 class TopicStrap extends React.Component {
     constructor(props) {
         super(props);
@@ -26,8 +25,6 @@ class TopicStrap extends React.Component {
             </div>
         )
     }
-
-
 
     getTopics () {
         return fetch ('https://northcoders-news-api.herokuapp.com/api/topics')

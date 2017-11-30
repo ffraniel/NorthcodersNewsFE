@@ -9,6 +9,7 @@ class ArticleText extends React.Component {
   }
   render() {
     return (
+
       <div className="articleBox">
         <RankAndVote post={this.props.article} index={0}/>
         <div className="articleBody">
@@ -24,6 +25,9 @@ class ArticleText extends React.Component {
             </Link>
           </p>
           <div className="listLinks">
+          <Link to={`/${this.props.article._id}/comments`}>
+                    <p>{this.props.comments.length} comments</p>
+            </Link>
             <a href="#">
               <p>permalink</p>
             </a>

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './Comment.css';
-import Search from './Search';
 import LoadingComp from './LoadingComp';
 import ArticleComments from './ArticleComments';
 import CommentForm from './CommentForm';
@@ -15,24 +14,22 @@ class Comment extends React.Component {
             loading:true
         })
         this.getComments = this.getComments.bind(this);
-        this.addComment =this.addComment.bind(this);
+        this.addComment = this.addComment.bind(this);
     }
     componentDidMount() {
-        this.getComments();
+        this.getComments(this.props.match.params.articleID);
     }
 
     render () {
         return (
             <div className="commentsList">
-                <Search />
                     {this.state.loading && <LoadingComp />}
                     {!this.state.loading && <ArticleComments comments={this.state.comments} />}
-                
                     <CommentForm addComment={this.addComment}  articleID={this.props.match.params.articleID}/>
             </div>
         )};
-    getComments () {
-        return fetch (`https://northcoders-news-api.herokuapp.com/api/articles/${this.props.match.params.articleID}/comments`)
+    getComments (artID) {
+        return fetch (`https://northcoders-news-api.herokuapp.com/api/articles/${artID}/comments`)
         .then((resBuffer)=>{
             return resBuffer.json()
         })

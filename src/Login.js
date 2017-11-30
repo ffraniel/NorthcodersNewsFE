@@ -2,20 +2,26 @@ import React, { Component } from 'react';
 import './Login.css';
 
 class Login extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state=({
+        })
+    }
     render () {
         return (
             <div className="login">
-                <h4>Login or sign up</h4>
-                <form action="/localhost/3000" method="post">
-                    Username
-                    <input type="text" name="Username"></input>
-                    Last name:
-                    <input type="text" name="Password"></input>
-                    <input type="submit" value="Submit"></input>
-                </form> 
+                            <h4>Login or sign up</h4>
+                            <form onSubmit={this.props.loginSubmit} >
+                                <p>Username</p>
+                                <input type="text" className="col-md-10"  />
+                                <input type="submit" value="Submit" />
+                            </form> 
+                            
             </div>
         )
     }
 }
+
+
 
 export default Login;

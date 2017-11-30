@@ -6,24 +6,26 @@ import List from './List';
 import Article from './Article';
 import TopicArticles from './TopicArticles';
 import Comment from './Comment';
-import Main from './Main';
 import NoMatch from './NoMatch';
 import Profile from './Profile';
+import Search from './Search';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state=({
-      loggedIn:false
+      username:''
     })
+
   }
   render() {
     return (
       <BrowserRouter>
         <div>
         <Header />
+        <Search />
         <Switch>
-          <Route exact path="/" component={Main} />
+          <Route exact path="/" component={List} />
           <Route path="/:articleID/comments" component={Comment} />
           <Route path="/:articleID/article" component={Article} />
           <Route path="/topics/:topic/articles" component={TopicArticles} />
@@ -35,6 +37,10 @@ class App extends React.Component {
       </BrowserRouter>
     );
   }
+
+
+
+
 }
 
 
