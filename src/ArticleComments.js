@@ -6,6 +6,7 @@ import LoadingComp from "./LoadingComp";
 import Comment from "./Comment";
 import NoMatch from "./NoMatch";
 import CommentsRankAndVote from './CommentsRankAndVote';
+import { setInterval } from "timers";
 
 class ArticleComments extends React.Component {
   constructor(props) {
@@ -28,7 +29,11 @@ class ArticleComments extends React.Component {
                 <p className="authoredBy">
                 Submitted 6 hours ago by <Link to={`/users/${comment.created_by}`}>{comment.created_by}</Link>
               </p>
-
+              <div className="listLinks">
+                <a href="#" onClick={scrollToCommenter}>
+                  <p>Reply</p>
+                </a>
+              </div>
               </div>
             </div>
           );
@@ -36,7 +41,14 @@ class ArticleComments extends React.Component {
       </div>
     );
   }
-
   
+}
+
+
+function scrollToCommenter (event) {
+  event.preventDefault();
+  document.querySelector('.commentForm').scrollIntoView({ 
+    behavior: 'smooth' 
+  })
 }
 export default ArticleComments;

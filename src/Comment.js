@@ -11,21 +11,26 @@ class Comment extends React.Component {
         this.state = ({
             comments:[],
             searchVal:'',
-            loading:true
+            loading:true,
+            articleTitle:'',
+            artLoading:true
         })
         this.getComments = this.getComments.bind(this);
         this.addComment = this.addComment.bind(this);
     }
     componentDidMount() {
         this.getComments(this.props.match.params.articleID);
+        this.getTitle(this.props.match.params.articleID);
     }
 
     render () {
         return (
             <div className="commentsList">
-                    {this.state.loading && <LoadingComp />}
-                    {!this.state.loading && <ArticleComments comments={this.state.comments} />}
-                    <CommentForm addComment={this.addComment}  articleID={this.props.match.params.articleID}/>
+                {this.state.artLoading && <LoadingComp />}
+                {!this.state.artLoading && <h1>{this.state.articleTitle}</h1>}
+                {this.state.loading && <LoadingComp />}
+                {!this.state.loading && <ArticleComments comments={this.state.comments} />}
+                <CommentForm addComment={this.addComment}  articleID={this.props.match.params.articleID}/>
             </div>
         )};
     getComments (artID) {
@@ -62,6 +67,19 @@ class Comment extends React.Component {
             })
         })
         .catch(console.log);
+    }
+    getTitle (artID) {
+        return fetch (`https://northcoders-news-api.herokuapp.com/api/articles/${artID}`)
+        .then((resBuffer)=>{
+            return resBuffer.json();
+        })
+        .then((res)=>{
+            this.setState({
+                articleTitle:res.title,
+                artLoading:false
+            })
+        })
+        .catch(console.log)
     }
 
 
