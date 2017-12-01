@@ -15,6 +15,7 @@ class ArticleComments extends React.Component {
       comments: this.props.comments,
       searchVal: ""
     };
+    // this.deleteHandler = this.deleteHandler.bind(this);
   }
 
   render() {
@@ -33,17 +34,21 @@ class ArticleComments extends React.Component {
                 <a href="#" onClick={scrollToCommenter}>
                   <p>Reply</p>
                 </a>
+                <a href="#" commentID={comment._id} onClick={this.deleteHandler.bind(this, comment) }> 
+                  <p>Delete</p>
+                </a>
               </div>
               </div>
             </div>
           );
-        })}
+        }, this) }
       </div>
     );
   }
-  
+  deleteHandler (comment) {
+    this.props.deleteComment(comment);
+  }
 }
-
 
 function scrollToCommenter (event) {
   event.preventDefault();
@@ -51,4 +56,5 @@ function scrollToCommenter (event) {
     behavior: 'smooth' 
   })
 }
+
 export default ArticleComments;
