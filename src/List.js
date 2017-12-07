@@ -27,7 +27,7 @@ class List extends React.Component {
         )};  
 
     getPosts () {
-        return fetch ('https://northcoders-news-api.herokuapp.com/api/articles')
+        return fetch ('http://localhost:3000/api/articles')
         .then((resBuffer)=>{
             return resBuffer.json()
         })

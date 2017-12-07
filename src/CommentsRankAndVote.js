@@ -35,7 +35,7 @@ class CommentsRankAndVote extends React.Component {
     }
 
     upVote () {
-        return fetch(`https://northcoders-news-api.herokuapp.com/api/comments/${this.props.post._id}/?vote=up`, {method:'put'})
+        return fetch(`http://localhost:3000/api/comments/${this.props.post._id}/?vote=up`, {method:'put'})
         .then(resBuffer =>{ return resBuffer;})
         .then((res)=>{
           let num = this.state.preLoadNumber + 1;  
@@ -47,7 +47,7 @@ class CommentsRankAndVote extends React.Component {
       }
     
       downVote () {
-        return fetch(`https://northcoders-news-api.herokuapp.com/api/comments/${this.props.post._id}/?vote=down`, {method:'put'})
+        return fetch(`http://localhost:3000/api/comments/${this.props.post._id}/?vote=down`, {method:'put'})
         .then(resBuffer =>{ return resBuffer;})
         .then((res)=>{
             let num = this.state.preLoadNumber - 1;  

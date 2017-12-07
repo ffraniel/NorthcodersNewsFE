@@ -29,7 +29,7 @@ class Article extends React.Component {
     }
 
     getArticles () {
-        return fetch (`https://northcoders-news-api.herokuapp.com/api/articles/${this.props.match.params.articleID}`)
+        return fetch (`http://localhost:3000/api/articles/${this.props.match.params.articleID}`)
         .then((resBuffer)=>{
             return resBuffer.json();
         })
@@ -43,7 +43,7 @@ class Article extends React.Component {
     }
 
     getComments () {
-        return fetch (`https://northcoders-news-api.herokuapp.com/api/articles/${this.props.match.params.articleID}/comments`)
+        return fetch (`http://localhost:3000/api/articles/${this.props.match.params.articleID}/comments`)
         .then((resBuffer)=>{
             return resBuffer.json()
         })

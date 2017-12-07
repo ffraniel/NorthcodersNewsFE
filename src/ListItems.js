@@ -29,7 +29,7 @@ class ListItem extends React.Component {
                 </p>
                 <div className="listLinks">
                   <Link to={`/${post._id}/comments`}>
-                    <p>{post.comments} comments - Reply</p>
+                    <p>{post.comments} comments-reply</p>
                   </Link>
                 </div>
               </div>

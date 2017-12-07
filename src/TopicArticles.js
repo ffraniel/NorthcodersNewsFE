@@ -36,7 +36,7 @@ class TopicArticles extends React.Component {
         )};  
         
     getTopicArticles (topicName) {
-        return fetch (`https://northcoders-news-api.herokuapp.com/api/topics/${topicName}/articles`)
+        return fetch (`http://localhost:3000/api/topics/${topicName}/articles`)
         .then((resBuffer)=>{
             return resBuffer.json()
         })

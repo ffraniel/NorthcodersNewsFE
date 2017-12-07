@@ -27,7 +27,7 @@ class Profile extends React.Component {
     }
 
     getUser () {
-        return fetch(`https://northcoders-news-api.herokuapp.com/api/users/${this.props.match.params.userID.toLowerCase()}`)
+        return fetch(`http://localhost:3000/api/users/${this.props.match.params.userID.toLowerCase()}`)
         .then((resBuffer)=>{
             return resBuffer.json();
         })

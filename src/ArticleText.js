@@ -14,7 +14,7 @@ class ArticleText extends React.Component {
         <div className="articleBody">
           <h2 className="articleTitle">{this.props.article.title}</h2>
           <Link to={`/topics/${this.props.article.belongs_to}/articles`}>
-            <p>{this.props.article.belongs_to.toUpperCase()}</p>
+            <p className="uppercaseText">{this.props.article.belongs_to}</p>
           </Link>
           <p>{this.props.article.body}</p>
           <p className="authoredBy">

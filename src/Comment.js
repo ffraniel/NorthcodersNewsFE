@@ -28,7 +28,7 @@ class Comment extends React.Component {
     return (
       <div className="commentsList">
         {this.state.artLoading && <LoadingComp />}
-        {!this.state.artLoading && <h1>{this.state.articleTitle}</h1>}
+        {!this.state.artLoading && <h1>{this.state.articleTitle}</h1>, <button onClick={scrollToCommenter}>Leave Comment</button>}
         {this.state.loading && <LoadingComp />}
         {!this.state.loading && (
           <ArticleComments
@@ -45,7 +45,7 @@ class Comment extends React.Component {
   }
   getComments(artID) {
     return fetch(
-      `https://northcoders-news-api.herokuapp.com/api/articles/${
+      `http://localhost:3000/api/articles/${
         artID
       }/comments`
     )
@@ -63,7 +63,7 @@ class Comment extends React.Component {
 
   addComment(comment, articleID) {
     return fetch(
-      `https://northcoders-news-api.herokuapp.com/api/articles/${
+      `http://localhost:3000/api/articles/${
         articleID
       }/comments`,
       {
@@ -88,7 +88,7 @@ class Comment extends React.Component {
   }
 
   deleteComment(comment) {
-    return fetch (`https://northcoders-news-api.herokuapp.com/api/comments/${comment._id}/`,
+    return fetch (`http://localhost:3000/api/comments/${comment._id}/`,
     {method:"delete"})
     .then((resBuffer)=>{
         return resBuffer
@@ -109,7 +109,7 @@ class Comment extends React.Component {
 
   getTitle(artID) {
     return fetch(
-      `https://northcoders-news-api.herokuapp.com/api/articles/${artID}`
+      `http://localhost:3000/api/articles/${artID}`
     )
       .then(resBuffer => {
         return resBuffer.json();
@@ -124,4 +124,12 @@ class Comment extends React.Component {
   }
 }
 var currentCommentState;
+
+function scrollToCommenter (event) {
+  event.preventDefault();
+  document.querySelector('.commentForm').scrollIntoView({ 
+    behavior: 'smooth' 
+  })
+}
+
 export default Comment;
