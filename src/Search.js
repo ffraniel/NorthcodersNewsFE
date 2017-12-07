@@ -13,7 +13,7 @@ class Search extends React.Component {
     }
     render () {
         return (
-            <div className="search">
+            <div className="search" onClick={notFunctionalSearch}>
                 <form onSubmit={this.handleSubmit}>
                     Search
                     <input type="text" value={this.state.searchVal} className="col-md-10" onChange={this.handleChange} />
@@ -41,6 +41,10 @@ class Search extends React.Component {
         })
         this.setState({articles:filteredList})
     }
+}
+
+function notFunctionalSearch (e) {
+    alert("I have not implemented the search functionality on this demo. This may be added at a later date...")
 }
 
 export default Search;

@@ -28,7 +28,7 @@ class Comment extends React.Component {
     return (
       <div className="commentsList">
         {this.state.artLoading && <LoadingComp />}
-        {!this.state.artLoading && <h1>{this.state.articleTitle}</h1>, <button onClick={scrollToCommenter}>Leave Comment</button>}
+        {!this.state.artLoading && <div><h1>{this.state.articleTitle}</h1> <button onClick={scrollToCommenter}>Leave Comment</button></div>}
         {this.state.loading && <LoadingComp />}
         {!this.state.loading && (
           <ArticleComments

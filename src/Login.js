@@ -9,7 +9,7 @@ class Login extends React.Component {
     }
     render () {
         return (
-            <div className="login">
+            <div className="login" onClick={notFunctional}>
                             <h4>Login or sign up</h4>
                             <form onSubmit={this.props.loginSubmit} >
                                 <p>Username</p>
@@ -22,6 +22,9 @@ class Login extends React.Component {
     }
 }
 
+function notFunctional (e) {
+    alert("I have not implemented login functionality on this demo. The login component is here for visual purposes only.")
+}
 
 
 export default Login;
