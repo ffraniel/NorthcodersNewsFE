@@ -16,7 +16,7 @@ class ListItem extends React.Component {
         {this.props.posts.map((post, index) => {
           return (
             <div className="listEntry">
-              <RankAndVote post={post} index={index}/>
+              <RankAndVote post={post} />
               <div className="listItem">
                 <Link to={`/${post._id}/article`}>
                   <h2 className="artTitle">{post.title}</h2>

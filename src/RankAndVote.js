@@ -18,10 +18,10 @@ class RankAndVote extends React.Component {
     render (){
         return(
             <div className="rankAndVote">
-                <h1>{this.props.index + 1}</h1>
-                <button onClick={this.handleVoteUp}>Up</button>
-                <p>{this.props.post.votes + this.state.preLoadNumber}</p>
-                <button onClick={this.handleVoteDown}>Down</button>
+                {/* <h1>{this.props.index + 1}</h1> */}
+                <button onClick={this.handleVoteUp}><i class="fa fa-hand-o-up"></i></button>
+                <p className="numOfVotes">{this.props.post.votes + this.state.preLoadNumber}</p>
+                <button onClick={this.handleVoteDown}><i class="fa fa-hand-o-down"></i></button>
               </div>
         )
     }

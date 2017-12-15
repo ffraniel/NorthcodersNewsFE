@@ -15,14 +15,16 @@
     width:100%;
 }
 
-.commentEntry .rankAndVote {
+/* .commentEntry  */
+.rankAndVote {
     /* border:solid gainsboro 0.5px; */
     display:inline-block;
     position: relative;
     padding:0.5rem;
 
 }
-.commentEntry .articleBody {
+/* .commentEntry  */
+.articleBody {
     /* border:solid gainsboro 0.5px; */
     position: relative;
     display:inline-block;
@@ -33,4 +35,9 @@
 
 .uppercaseText {
     text-transform: uppercase;
+}
+
+.articleBox {
+    max-width: 1400px;
+    margin: auto;
 }

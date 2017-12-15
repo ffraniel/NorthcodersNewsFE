@@ -10,13 +10,14 @@ class Login extends React.Component {
     render () {
         return (
             <div className="login" onClick={notFunctional}>
-                            <h4>Login or sign up</h4>
-                            <form onSubmit={this.props.loginSubmit} >
-                                <p>Username</p>
-                                <input type="text" className="col-md-10"  />
-                                <input type="submit" value="Submit" />
-                            </form> 
-                            
+                <dfn data-info="I have not implemented login functionality on this demo. The login component is here for visual purposes only.">
+                    <h4>Login or sign up</h4>
+                    <form onSubmit={this.props.loginSubmit} >
+                        <p>Username</p>
+                        <input type="text"   />
+                        <input type="submit" value="Submit" />
+                    </form> 
+                </dfn>        
             </div>
         )
     }

@@ -9,14 +9,16 @@ class TopicStrapIterator extends React.Component {
     render() {
         return (
             <div className="topicStrapIterator">
-                <NavLink topicActive={ {color:'green'} } to={`/`}><h4>All</h4></NavLink>
-                {this.props.topics.map((topic) => {
-                    return (
-                    <NavLink topicActive={ {color:'green'} } to={`/topics/${topic.title}/articles`}>
-                        <h4>{topic.title}</h4>
-                    </NavLink>
-                    )
-                })}
+                <ul>
+                    <li><NavLink className="topicMenuButtons" topicActive={ {color:'green'} } to={`/`}><h4>All</h4></NavLink></li>
+                    {this.props.topics.map((topic) => {
+                        return (
+                        <li><NavLink className="topicMenuButtons" topicActive={ {color:'green'} } to={`/topics/${topic.title}/articles`}>
+                            <h4>{topic.title}</h4>
+                        </NavLink></li>
+                        )
+                    })}
+                </ul>
             </div>
             
             

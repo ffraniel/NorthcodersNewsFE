@@ -1,0 +1,8 @@
+.commentsRankAndVote {
+    display:inline-block;   
+    padding:0 0 0 0.5rem;
+}
+
+.numOfCommentsVotes {
+    text-align: center;
+}

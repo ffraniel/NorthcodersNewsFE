@@ -28,3 +28,7 @@
     height:100%;
 }
 
+.mainList {
+    max-width: 1200px;
+    margin: auto;
+}

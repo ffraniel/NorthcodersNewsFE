@@ -1,0 +1,11 @@
+.rankAndVote button {
+    font-size:0.8rem;
+}
+
+.rankAndVote {
+    display:inline-block;  
+    margin-right:1rem;
+}
+.numOfVotes {
+    text-align: center;
+}

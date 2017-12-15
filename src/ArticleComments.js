@@ -24,18 +24,18 @@ class ArticleComments extends React.Component {
         {this.state.comments.map((comment, index) => {
           return (
             <div className="commentEntry">
-              <CommentsRankAndVote post={comment} index={index}/>
+              <CommentsRankAndVote post={comment}/>
               <div className="commentItem">
-                <p>{comment.body}</p>
+                <p className="commentBody">{comment.body}</p>
                 <p className="authoredBy">
                 Submitted 6 hours ago by <Link to={`/users/${comment.created_by}`}>{comment.created_by}</Link>
               </p>
               <div className="listLinks">
                 <a href="#" onClick={scrollToCommenter}>
-                  <p>Reply</p>
+                  <p>reply</p>
                 </a>
                 <a href="#" commentID={comment._id} onClick={this.deleteHandler.bind(this, comment) }> 
-                  <p>Delete</p>
+                  <p>delete</p>
                 </a>
               </div>
               </div>

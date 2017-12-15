@@ -3,3 +3,59 @@
     position: relative;
     float:right;
 };
+
+.login h1 {
+    font-style:normal;
+}
+
+.login p {
+    font-style:normal;
+}
+
+
+
+dfn {
+
+    cursor: help;
+    font-style: normal;
+    position: relative;
+    border-radius:10px;
+  }
+
+  dfn::after {
+    content: attr(data-info);
+    font-style: italic;
+    display: inline;
+    position: absolute;
+    top: 120px; left: -20px;
+    opacity: 0;
+    width: 180px;
+    font-family:'Varela', 'sans-serif';
+    font-size: 0.75rem;;
+    font-weight: 700;
+    line-height: 1.5em;
+    padding: 0.5em 0.8em;
+    background: rgba(0,0,0,0.8);
+    color: #fff;
+    pointer-events: none; /* Prevents box apearing when hovered */
+    transition: opacity 250ms, top 250ms;
+    border-radius:20px;
+  }
+  
+  dfn::before {
+    content: '';
+    font-style: normal;
+    display: block;
+    position: absolute;
+    top: 12px; left: 20px;
+    opacity: 0;
+    width: 0; height: 0;
+    border: solid transparent 5px;
+    border-bottom-color: rgba(0,0,0,0.8);
+    transition: opacity 250ms, top 250ms;
+  }
+  dfn:hover {z-index: 2;} /* Keeps the info boxes on top of other elements */
+  dfn:hover::after,
+  dfn:hover::before {opacity: 1;}
+  dfn:hover::after {top: 30px;}
+  dfn:hover::before {top: 20px;}

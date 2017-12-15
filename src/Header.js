@@ -12,7 +12,7 @@ class Header extends React.Component {
                 <div className="topHeader">
                     <div>
                         <Link to="/" >
-                            <h1>Saiddit News</h1>
+                            <h1 className="pageTitle">Saiddit News</h1>
                         </Link>
                     </div>
                     <Login />

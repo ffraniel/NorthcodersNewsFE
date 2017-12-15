@@ -19,9 +19,13 @@ class Profile extends React.Component {
         return (
 
             <div className="profileBox">
-                <h1>{this.state.user.username}</h1>
-                <p>{this.state.user.name}</p>
-                <img src={this.state.user.avatar_url} alt="User profile picture" />
+                <div className="profilePicBox">
+                    <img src={this.state.user.avatar_url} alt="User profile picture" />
+                </div>
+                <div className="profileDetails">
+                    <h1>{this.state.user.username}</h1>
+                    <p>{this.state.user.name}</p> 
+                </div>
             </div>
         )
     }

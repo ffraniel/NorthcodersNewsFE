@@ -14,11 +14,13 @@ class Search extends React.Component {
     render () {
         return (
             <div className="search" onClick={notFunctionalSearch}>
-                <form onSubmit={this.handleSubmit}>
-                    Search
-                    <input type="text" value={this.state.searchVal} className="col-md-10" onChange={this.handleChange} />
-                    <input type="submit" value="Submit" />
-                </form> 
+                <dfn data-info="I have not implemented the search functionality on this demo. This may be added at a later date...">
+                    <form onSubmit={this.handleSubmit}>
+                        Search
+                        <input type="text" value={this.state.searchVal} onChange={this.handleChange} />
+                        <input type="submit" value="Submit" />
+                    </form> 
+                </dfn>
             </div>
         )
     }

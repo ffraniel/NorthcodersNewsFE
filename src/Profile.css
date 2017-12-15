@@ -1,0 +1,24 @@
+.profileBox {
+    max-width:1200px;
+    margin:auto;
+    border:solid gainsboro 0.5px;
+}
+
+.profileBox h1 {
+    padding-left:60px;
+}
+.profileBox p {
+    padding-left:60px;
+}
+.profileBox img {
+    border:solid rgb(44, 44, 44) 1px;
+}
+
+.profileBox .profilePicBox {
+    padding-left:60px;
+    float:left;
+}
+.profileBox .profileDetails {
+    float:left;
+
+}

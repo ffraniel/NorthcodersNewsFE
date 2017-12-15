@@ -30,3 +30,12 @@
     height:100%;
     width: 70%;
 }
+
+.commentsList {
+    max-width: 1400px;
+    margin: auto;
+}
+
+.scrollCommentButton {
+    /* padding: 6px 0 6px 6px; */
+}

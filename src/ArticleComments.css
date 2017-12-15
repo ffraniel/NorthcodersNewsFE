@@ -1,0 +1,13 @@
+.commentsIterator {
+    padding-top: 10px;
+}
+.commentBody {
+    padding-left:30px;
+}
+.commentItem .authoredBy {
+    padding-left:30px;
+}
+
+.commentItem .listLinks {
+    padding-left:30px;
+} 

@@ -1,0 +1,29 @@
+.pageTitle {
+    font-family:  'Playfair Display';
+    font-size:0rem;
+    padding-left:1rem;
+    text-decoration: overline underline;
+  }
+  p {
+    font-family: 'Varela', sans-serif;
+    font-size: 0.85rem;
+  }
+  h1 {
+  font-family: 'Playfair Display', serif;
+  /* font-size:0.95rem; */
+  }
+  h2 {
+  font-family: 'Playfair Display', serif;
+  /* font-size:0.95rem; */
+  }
+  h3 {
+  font-family: 'Playfair Display', serif;
+  /* font-size:0.95rem; */
+  }
+  h4 {
+  font-family: 'Playfair Display', serif;
+  /* font-size:0.95rem; */
+  } 
+  button {
+    font-family: 'Varela', sans-serif;
+  }
