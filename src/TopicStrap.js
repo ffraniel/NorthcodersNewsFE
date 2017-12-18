@@ -27,7 +27,7 @@ class TopicStrap extends React.Component {
     }
 
     getTopics () {
-        return fetch ('http://localhost:3000/api/topics')
+        return fetch ('https://vast-tundra-92428.herokuapp.com/api/topics')
         .then((resBuffer)=>{
             return resBuffer.json()
         })
