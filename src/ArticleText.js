@@ -1,12 +1,9 @@
 import React, { Component } from "react";
-import { BrowserRouter, Route, Switch, Link, NavLink } from "react-router-dom";
+import {Link} from "react-router-dom";
 import "./ArticleText.css";
 import RankAndVote from './RankAndVote';
 
 class ArticleText extends React.Component {
-  constructor(props) {
-    super(props);
-  }
   render() {
     return (
       <div className="articleBox">

@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
-import {BrowserRouter, Route, Switch, Link, NavLink} from 'react-router-dom';
 import './Profile.css';
 import LoadingComp from './LoadingComp';
 import UserIterator from './UserIterator';
-const bodyParser = require('body-parser');
 
 class Profile extends React.Component {
     constructor (props) {
@@ -23,10 +21,9 @@ class Profile extends React.Component {
 
     render() {
         return (
-
             <div className="profileBox">
                 <div className="profilePicBox">
-                    <img src={this.state.user.avatar_url} alt="User profile picture" />
+                    <img src={this.state.user.avatar_url} alt="User profile" />
                 </div>
                 <div className="profileDetails">
                     <h1>{this.state.user.username}</h1>
@@ -52,6 +49,7 @@ class Profile extends React.Component {
         })
         .catch(console.log)
     }
+
     getAllUsers () {
         return fetch('https://vast-tundra-92428.herokuapp.com/api/users/')
         .then((resBuffer)=>{
@@ -65,7 +63,6 @@ class Profile extends React.Component {
         })
         .catch(console.log)
     }
-
 }
 
 export default Profile;

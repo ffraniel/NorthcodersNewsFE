@@ -1,15 +1,9 @@
 import React, { Component } from "react";
-import Listcss from "./List.css";
-import { BrowserRouter, Route, Switch, Link, NavLink } from "react-router-dom";
+import "./List.css";
+import { Link } from "react-router-dom";
 import RankAndVote from './RankAndVote';
 
-
 class ListItem extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
-
   render() {
     return (
       <div className="listIterator">
@@ -39,7 +33,6 @@ class ListItem extends React.Component {
       </div>
     );
   }
-
 }
 
 export default ListItem;

@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import './CommentForm.css';
-import LoadingComp from './LoadingComp';
-const bodyParser = require('body-parser');
 
 class CommentForm extends React.Component {
     constructor(props) {
@@ -33,7 +31,6 @@ class CommentForm extends React.Component {
         this.props.addComment(`{"comment": "${this.state.value}"}`, this.state.articleID);
         this.setState({value:''})
     }
-
 }
 
 export default CommentForm;

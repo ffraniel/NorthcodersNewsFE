@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import './List.css';
 import ListItems from './ListItems';
 import LoadingComp from './LoadingComp';
-const bodyParser = require('body-parser');
 
 class List extends React.Component {
     constructor(props) {
@@ -39,7 +38,6 @@ class List extends React.Component {
         })
         .catch(console.log)
     }
-
 }
 
 export default List;

@@ -27,5 +27,4 @@ function notFunctional (e) {
     alert("I have not implemented login functionality on this demo. The login component is here for visual purposes only.")
 }
 
-
 export default Login;

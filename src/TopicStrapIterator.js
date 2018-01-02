@@ -1,11 +1,8 @@
 import React, { Component } from 'react';
-import {BrowserRouter, Route, Switch, Link, NavLink} from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
 import './TopicStrapIterator.css';
 
 class TopicStrapIterator extends React.Component {
-    constructor(props) {
-        super(props);
-    }
     render() {
         return (
             <div className="topicStrapIterator">

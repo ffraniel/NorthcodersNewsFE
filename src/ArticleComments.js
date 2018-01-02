@@ -1,12 +1,7 @@
 import React, { Component } from "react";
-import {BrowserRouter, Route, Switch, Link, NavLink} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import "./ArticleComments.css";
-import Search from "./Search";
-import LoadingComp from "./LoadingComp";
-import Comment from "./Comment";
-import NoMatch from "./NoMatch";
 import CommentsRankAndVote from './CommentsRankAndVote';
-import { setInterval } from "timers";
 
 class ArticleComments extends React.Component {
   constructor(props) {
@@ -15,7 +10,6 @@ class ArticleComments extends React.Component {
       comments: this.props.comments,
       searchVal: ""
     };
-    // this.deleteHandler = this.deleteHandler.bind(this);
   }
 
   render() {
@@ -23,7 +17,7 @@ class ArticleComments extends React.Component {
       <div className="commentsIterator">
         {this.state.comments.map((comment, index) => {
           return (
-            <div className="commentEntry">
+            <div className="commentEntry" key={index}>
               <CommentsRankAndVote post={comment}/>
               <div className="commentItem">
                 <p className="commentBody">{comment.body}</p>
@@ -34,7 +28,7 @@ class ArticleComments extends React.Component {
                 <a href="#" onClick={scrollToCommenter}>
                   <p>reply</p>
                 </a>
-                <a href="#" commentID={comment._id} onClick={this.deleteHandler.bind(this, comment) }> 
+                <a href="#" commentid={comment._id} onClick={this.deleteHandler.bind(this, comment) }> 
                   <p>delete</p>
                 </a>
               </div>

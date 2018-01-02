@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {BrowserRouter, Route, Switch, Link, NavLink} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import Login from './Login';
 import './Header.css';
 import TopicStrap from './TopicStrap';
@@ -26,7 +26,6 @@ class Header extends React.Component {
             </div>
         )
     }
-
 }
 
 export default Header;

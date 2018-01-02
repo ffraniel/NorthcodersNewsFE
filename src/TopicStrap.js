@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
-import {BrowserRouter, Route, Switch, Link, NavLink} from 'react-router-dom';
 import './TopicStrap.css';
 import LoadingComp from './LoadingComp';
 import TopicStrapIterator from './TopicStrapIterator';
-const bodyParser = require('body-parser');
 
 class TopicStrap extends React.Component {
     constructor(props) {
@@ -39,6 +37,5 @@ class TopicStrap extends React.Component {
         })
     }
 }
-
 
 export default TopicStrap;

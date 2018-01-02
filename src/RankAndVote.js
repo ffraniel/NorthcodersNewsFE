@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 import "./RankAndVote.css";
-import { BrowserRouter, Route, Switch, Link, NavLink } from "react-router-dom";
-const bodyParser = require('body-parser');
 
 class RankAndVote extends React.Component {
     constructor(props) {
@@ -18,10 +16,9 @@ class RankAndVote extends React.Component {
     render (){
         return(
             <div className="rankAndVote">
-                {/* <h1>{this.props.index + 1}</h1> */}
-                <button onClick={this.handleVoteUp}><i class="fa fa-hand-o-up"></i></button>
-                <p className="numOfVotes">{this.props.post.votes + this.state.preLoadNumber}</p>
-                <button onClick={this.handleVoteDown}><i class="fa fa-hand-o-down"></i></button>
+                <button onClick={this.handleVoteUp}><i className="fa fa-hand-o-up"></i></button>
+                <p className="numOfVotes">{(this.props.post.votes + this.state.preLoadNumber).toString()}</p>
+                <button onClick={this.handleVoteDown}><i className="fa fa-hand-o-down"></i></button>
               </div>
         )
     }

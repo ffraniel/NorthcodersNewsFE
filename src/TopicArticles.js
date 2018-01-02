@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import './TopicArticles.css';
 import LoadingComp from './LoadingComp';
 import ListItems from './ListItems';
-const bodyParser = require('body-parser');
 
 class TopicArticles extends React.Component {
     constructor(props) {
@@ -48,7 +47,6 @@ class TopicArticles extends React.Component {
         })
         .catch(console.log)
     }
-
 }
 
 export default TopicArticles;

@@ -3,7 +3,6 @@ import "./Comment.css";
 import LoadingComp from "./LoadingComp";
 import ArticleComments from "./ArticleComments";
 import CommentForm from "./CommentForm";
-const bodyParser = require("body-parser");
 
 class Comment extends React.Component {
   constructor(props) {
