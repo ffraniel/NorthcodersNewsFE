@@ -16,7 +16,6 @@ class App extends React.Component {
     this.state=({
       username:'northcoder'
     })
-
   }
   render() {
     return (
@@ -33,15 +32,9 @@ class App extends React.Component {
           <Route default component={NoMatch}/>
         </Switch>
         </div>
-
       </BrowserRouter>
     );
   }
-
-
-
-
 }
-
 
 export default App;
