@@ -11,17 +11,13 @@ class Profile extends React.Component {
             user:[],
             allUsers:[],
             loading:true,
-            userPosts:[],
-            userPostsLoading:true
         })
         this.getUser = this.getUser.bind(this);
         this.getAllUsers = this.getAllUsers.bind(this);
-        this.getPosts = this.getPosts.bind(this);
     }
     componentDidMount(){
         this.getUser();
         this.getAllUsers();
-        this.getPosts();
     }
 
     render() {
@@ -38,10 +34,6 @@ class Profile extends React.Component {
                         <h3>Other Users</h3>
                         {this.state.loading && <LoadingComp />}
                         {!this.state.loading && <UserIterator allUsers={this.state.allUsers}/>}
-                    </div>
-                    <div className="allPosts">
-                        {this.state.userPostsLoading && <LoadingComp />}
-                        {!this.state.userPostsLoading && <ProfilePosts userPosts={this.state.userPosts} />}
                     </div>
             </div>
         )
@@ -72,19 +64,6 @@ class Profile extends React.Component {
             })
         })
         .catch(console.log)
-    }
-
-    getPosts () {
-        return fetch('https://vast-tundra-92428.herokuapp.com/api/articles')
-        .then((resBuffer)=>{
-            return resBuffer.json();
-        })
-        .then((res)=>{
-            this.setState({
-                userPosts:res.articles,
-                userPostsLoading:false
-            })
-        })
     }
 }
 
