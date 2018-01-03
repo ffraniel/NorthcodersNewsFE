@@ -92,5 +92,14 @@
         width:100%;
         height:100%;
     }
+}
 
- }
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+    .pageTitle {
+        font-size:5rem;
+        font-family:  'Playfair Display';
+        text-decoration: overline underline;
+        color:rgb(26, 16, 12);
+    }
+}
