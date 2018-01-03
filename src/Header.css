@@ -45,3 +45,20 @@
         width:100%;
     }
 }
+  /* Galaxy S6 standard */ 
+  @media only screen and (min-width : 360px) {
+    .pageTitle {
+        font-size:4rem;
+        text-align:center;
+        font-family:  'Playfair Display';
+        text-decoration: overline;
+        color:rgba(58, 26, 11, 0.918);
+    }
+
+    #headerImage {
+        height:50px;
+        margin:0;
+        padding:0;
+        width:100%;
+    }
+}

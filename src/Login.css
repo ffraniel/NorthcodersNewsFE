@@ -38,6 +38,26 @@
         width:100%;
     }
 }
+  /* Galaxy S6 standard */ 
+  @media only screen and (min-width : 360px) {
+    .login {
+        left:-30px;
+        border:solid rgba(75, 66, 66, 0.062) 0.3px;
+        background-color:rgba(146, 177, 174, 0.137);
+        height:200px;
+        border-radius:7px;
+    }
+    .login h4 {
+        padding-top:5px;
+        margin-top:0px;
+        font-size:1rem;
+    }
+    .login p {
+        font-size:0.9rem;
+        padding-left:5px;
+        padding-top:-25px;
+    }
+}
 
 .login {
     display:block-inline;
