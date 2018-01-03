@@ -91,6 +91,22 @@
         font-weight:900;
     }
 }
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+    .login {
+        margin-top:10px;
+        padding:30px;
+        height:225px;
+        width:270px;
+        border-radius:6px;
+    }
+    .login h4 {
+        font-size:1rem;
+    }
+    .login p {
+        font-size:0.9rem;
+    }
+}
 
 .login {
     display:block-inline;

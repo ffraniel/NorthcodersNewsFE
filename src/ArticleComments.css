@@ -7,6 +7,10 @@
 .commentItem .authoredBy {
     padding-left:30px;
 }
+.commentsIterator {
+    max-width: 1400px;
+    margin: auto;
+}
 
 .commentItem .listLinks {
     padding-left:30px;
@@ -23,5 +27,11 @@
     }
     .commentEntry .commentsRankAndVote .numOfCommentsVotes {
         font-size:1.2rem;
+    }
+}
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+    .commentsIterator {
+        text-align:left;
     }
 }

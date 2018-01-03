@@ -22,7 +22,7 @@
     position: relative;
     padding:0.5rem;
 }
-/* .commentEntry  */
+
 .articleBody {
     /* border:solid gainsboro 0.5px; */
     position: relative;
@@ -39,6 +39,7 @@
 .articleBox {
     max-width: 1400px;
     margin: auto;
+    margin-left:55px;
 }
 
 /* Custom, iPhone Retina */ 
@@ -62,5 +63,14 @@
     }
     .numOfVotes {
         font-size:1.2rem;
+    }
+}
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+    .articleBox {
+        text-align:left;
+    }
+    .numOfVotes {
+        font-size:1rem;
     }
 }

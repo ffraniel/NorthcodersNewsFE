@@ -23,7 +23,7 @@
 }
 
 .mainList {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: auto;
 }
 
@@ -67,5 +67,12 @@
 @media only screen and (min-width : 768px) {
     .mainList {
         text-align:center;
+    }
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+    .mainList { 
+        text-align: left;
     }
 }

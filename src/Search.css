@@ -20,6 +20,13 @@
   };
 }
 
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+  .search {
+    padding: 10px 0 10px 45px;
+  };
+}
+
 .search dfn {
         cursor: help;
         font-style: normal;
