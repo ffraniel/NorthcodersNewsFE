@@ -15,7 +15,7 @@ class ArticleText extends React.Component {
           </Link>
           <p>{this.props.article.body}</p>
           <p className="authoredBy">
-            Submitted 6 hours ago by{" "}
+            Submitted a few hours ago by{" "}
             <Link to={`/users/${this.props.article.created_by}`}>
               {this.props.article.created_by}
             </Link>

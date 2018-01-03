@@ -22,7 +22,7 @@ class ArticleComments extends React.Component {
               <div className="commentItem">
                 <p className="commentBody">{comment.body}</p>
                 <p className="authoredBy">
-                Submitted 6 hours ago by <Link to={`/users/${comment.created_by}`}>{comment.created_by}</Link>
+                Submitted a few hours ago by <Link to={`/users/${comment.created_by}`}>{comment.created_by}</Link>
               </p>
               <div className="listLinks">
                 <a href="#" onClick={scrollToCommenter}>

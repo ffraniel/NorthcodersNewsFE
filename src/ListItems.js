@@ -15,11 +15,11 @@ class ListItem extends React.Component {
                 <Link to={`/${post._id}/article`}>
                   <h2 className="artTitle">{post.title}</h2>
                 </Link>
-                <Link to={`/topics/${post.belongs_to}/articles`}>
-                  <p>{post.belongs_to.toUpperCase()}</p>
+                <Link  to={`/topics/${post.belongs_to}/articles`}>
+                  <p className="topicLink" >{post.belongs_to.toUpperCase()}</p>
                 </Link>
                 <p className="authoredBy">
-                  Submitted 6 hours ago by <Link to={`/users/${post.created_by}`}>{post.created_by}</Link>
+                  Submitted a few hours ago by <Link to={`/users/${post.created_by}`}>{post.created_by}</Link>
                 </p>
                 <div className="listLinks">
                   <Link to={`/${post._id}/comments`}>
