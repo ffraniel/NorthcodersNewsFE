@@ -51,3 +51,16 @@
         font-size:1rem;
     }
 }
+
+/* Small Devices, Tablets */ 
+@media only screen and (min-width : 768px) {
+    .articleBox {
+        text-align:center;
+    }
+    .rankAndVote {
+        height:50%;
+    }
+    .numOfVotes {
+        font-size:1.2rem;
+    }
+}

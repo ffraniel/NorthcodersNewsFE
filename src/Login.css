@@ -23,7 +23,6 @@
         padding-left:5px;
         padding-top:-25px;
     }
-
     #submitLogin {
     width: 100%;
     background-color: #4CAF50;
@@ -58,8 +57,8 @@
         padding-top:-25px;
     }
 }
-  /* Iphone plus standards */ 
-  @media only screen and (min-width : 414px) {
+/* Iphone plus standards */ 
+@media only screen and (min-width : 414px) {
     .login {
         padding:30px;
         border:solid rgba(75, 66, 66, 0.062) 0.6px;
@@ -72,7 +71,26 @@
     .login p {
         font-size:1rem;
     }
-  }
+}
+/* Small Devices, Tablets */ 
+@media only screen and (min-width : 768px) {
+    .login {
+        margin-top:10px;
+        padding:30px;
+        border:solid rgba(75, 66, 66, 0.062) 0.6px;
+        height:205px;
+        width:240px;
+        border-radius:8px;
+    }
+    .login h4 {
+        font-size:1rem;
+        font-weight:900;
+    }
+    .login p {
+        font-size:0.8rem;
+        font-weight:900;
+    }
+}
 
 .login {
     display:block-inline;

@@ -9,6 +9,8 @@
   width: 80%;
   display: block;
   height: 100px;
+  background-color:rgb(236, 236, 236);
+  width:100%;
 }
 @media only screen and (min-width: 320px) {
   .commentButton {

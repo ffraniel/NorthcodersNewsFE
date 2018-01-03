@@ -11,3 +11,17 @@
 .commentItem .listLinks {
     padding-left:30px;
 } 
+/* Small Devices, Tablets */ 
+@media only screen and (min-width : 768px) {
+    .commentsIterator {
+        text-align:center;
+        left:-20px;
+    }
+    .commentsRankAndVote {
+        margin:0 0 50px 0;
+        margin-top:10px;
+    }
+    .commentEntry .commentsRankAndVote .numOfCommentsVotes {
+        font-size:1.2rem;
+    }
+}

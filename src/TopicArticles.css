@@ -2,3 +2,11 @@
     max-width: 1400px;
     margin: auto;
 }
+
+/* Small Devices, Tablets */ 
+@media only screen and (min-width : 768px) {
+    .topicArticlesList {
+        text-align:center;
+    }
+}
+

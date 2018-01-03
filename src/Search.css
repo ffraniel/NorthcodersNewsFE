@@ -12,6 +12,13 @@
       display:inline-block;
     };
 }
+/* Small Devices, Tablets */ 
+@media only screen and (min-width : 768px) {
+  .search {
+    padding: 8px 0 8px 35px;
+    display:block;
+  };
+}
 
 .search dfn {
         cursor: help;

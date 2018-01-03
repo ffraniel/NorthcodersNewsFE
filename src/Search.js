@@ -18,7 +18,7 @@ class Search extends React.Component {
                     <form onSubmit={this.handleSubmit}>
                         Search
                         <input className="searchInput" type="text" value={this.state.searchVal} onChange={this.handleChange} />
-                        <input type="submit" value="Submit" />
+                        <input id="submitSearch" type="submit" value="Submit" />
                     </form> 
                 </dfn>
             </div>

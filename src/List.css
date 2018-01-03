@@ -62,5 +62,10 @@
         .listEntry .listItem .authoredBy {
             padding-left:0px;
         }
-
+}
+/* Small Devices, Tablets */ 
+@media only screen and (min-width : 768px) {
+    .mainList {
+        text-align:center;
+    }
 }
