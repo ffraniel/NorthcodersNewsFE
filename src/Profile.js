@@ -27,7 +27,6 @@ class Profile extends React.Component {
     render() {
         return (
             <div className="profileBox">
-                <div>
                     <div className="profilePicBox">
                         <img src={this.state.user.avatar_url} alt="User profile" />
                     </div>
@@ -36,6 +35,7 @@ class Profile extends React.Component {
                         <p>{this.state.user.name}</p> 
                     </div>
                     <div className="otherUsers">
+                        <h3>Other Users</h3>
                         {this.state.loading && <LoadingComp />}
                         {!this.state.loading && <UserIterator allUsers={this.state.allUsers}/>}
                     </div>
@@ -43,8 +43,6 @@ class Profile extends React.Component {
                         {this.state.userPostsLoading && <LoadingComp />}
                         {!this.state.userPostsLoading && <ProfilePosts userPosts={this.state.userPosts} />}
                     </div>
-                </div>
-
             </div>
         )
     }

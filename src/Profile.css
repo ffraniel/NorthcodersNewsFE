@@ -1,4 +1,4 @@
-.profileBox {
+/* .profileBox {
     max-width:1200px;
     margin:auto;
     border:solid gainsboro 0.5px;
@@ -24,4 +24,34 @@
 }
 .otherUsers {
     float:right;
+} */
+
+/* Custom, iPhone Retina */ 
+@media only screen and (min-width : 320px) {
+    .profileBox {
+        padding-top:10px;
+        width:100%;
+
+    }
+    .profilePicBox {
+        border:solid red 1px;
+        text-align:center;
+        background-color: rgba(64, 150, 138, 0.082);
+        border:gainsboro solid 0.4px;
+    }
+    .profileDetails {
+
+    }
+    .profileDetails h1 {
+        text-align: center;
+    }
+    .profileDetails p {
+        text-align: center;
+    }
+    .otherUsers {
+        /* border:solid red 1px; */
+    }
+    .otherUsers h3 {
+        text-align: center;
+    }
 }

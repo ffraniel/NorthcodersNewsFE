@@ -8,9 +8,10 @@ class UserIterator extends React.Component {
       <ul className="UserIterator">
         {this.props.allUsers.map((user, index) => {
           return (
-            <li key={index}>
+            <li className="usersInList" key={index}>
               <NavLink to={`/users/${user.username}`} >{user.username}</NavLink>
             </li>
+
           );
         })}
       </ul>
