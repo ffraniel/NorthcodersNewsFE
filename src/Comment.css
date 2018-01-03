@@ -55,3 +55,19 @@
         top:4px;
     }
 }
+/* Iphone plus standards */ 
+@media only screen and (min-width : 414px) { 
+    .scrollCommentButton {
+        text-align:center;
+        width: 100%;
+        background-color: #4CAF50;
+        color: white;
+        margin: 0 0 0 0;
+        border: none;
+        border-radius: 4px;
+    }
+    .scrollCommentButton:active {
+        background-color: rgb(44, 110, 46);
+        top:4px;
+    }
+}

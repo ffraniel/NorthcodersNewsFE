@@ -62,3 +62,18 @@
         width:100%;
     }
 }
+
+  /* Iphone plus standards */ 
+  @media only screen and (min-width : 414px) {
+    .pageTitle {
+        font-size:5rem;
+        font-family:  'Playfair Display';
+        text-decoration: overline underline;
+        color:rgb(58, 26, 11);
+    }
+
+    #headerImage {
+        margin:0;
+        width:100%;
+    }
+  }

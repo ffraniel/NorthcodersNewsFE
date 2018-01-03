@@ -51,3 +51,16 @@
             padding-left:2px;
         }
 }
+  /* Iphone plus standards */ 
+@media only screen and (min-width : 414px) {
+    .listEntry .listItem {
+        padding-left:0.5rem;
+        }
+        .listEntry .listItem .topicLink {
+            padding-left:0px;
+        }
+        .listEntry .listItem .authoredBy {
+            padding-left:0px;
+        }
+
+}

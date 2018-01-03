@@ -1,7 +1,17 @@
-.search {
+@media only screen and (max-width : 413px) {
+  .search {
     padding: 6px 0 6px 4px;
     display:inline-block;
 };
+ }
+
+/* Iphone plus standards */ 
+@media only screen and (min-width : 414px) { 
+    .search {
+      padding: 8px 0 6px 30px;
+      display:inline-block;
+    };
+}
 
 .search dfn {
         cursor: help;

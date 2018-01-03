@@ -58,6 +58,21 @@
         padding-top:-25px;
     }
 }
+  /* Iphone plus standards */ 
+  @media only screen and (min-width : 414px) {
+    .login {
+        padding:30px;
+        border:solid rgba(75, 66, 66, 0.062) 0.6px;
+        height:230px;
+        border-radius:18px;
+    }
+    .login h4 {
+        font-size:1.2rem;
+    }
+    .login p {
+        font-size:1rem;
+    }
+  }
 
 .login {
     display:block-inline;
