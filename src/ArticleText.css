@@ -21,7 +21,6 @@
     display:inline-block;
     position: relative;
     padding:0.5rem;
-
 }
 /* .commentEntry  */
 .articleBody {
@@ -40,4 +39,15 @@
 .articleBox {
     max-width: 1400px;
     margin: auto;
+}
+
+/* Custom, iPhone Retina */ 
+@media only screen and (min-width : 320px) {
+    .rankAndVote {
+        position:relative;
+        bottom:0px;
+    }
+    .numOfVotes {
+        font-size:1rem;
+    }
 }

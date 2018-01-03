@@ -14,8 +14,8 @@ class Login extends React.Component {
                     <h4>Login or sign up</h4>
                     <form onSubmit={this.props.loginSubmit} >
                         <p>Username</p>
-                        <input type="text"   />
-                        <input type="submit" value="Submit" />
+                        <input id="textLogin" type="text"   />
+                        <input id="submitLogin" type="submit" value="Submit" />
                     </form> 
                 </dfn>        
             </div>

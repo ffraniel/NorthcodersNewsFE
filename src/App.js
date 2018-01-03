@@ -23,7 +23,7 @@ class App extends React.Component {
         <div>
         <Header />
         <Search />
-        <Switch>
+        <Switch className="container">
           <Route exact path="/" component={List} />
           <Route path="/:articleID/comments" component={Comment} />
           <Route path="/:articleID/article" component={Article} />

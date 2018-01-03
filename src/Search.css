@@ -1,11 +1,9 @@
 .search {
-    padding: 6px 0 6px 6px;
+    padding: 6px 0 6px 4px;
     display:inline-block;
 };
 
-
 .search dfn {
-    
         cursor: help;
         font-style: normal;
         position: relative;

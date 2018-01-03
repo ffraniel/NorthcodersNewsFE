@@ -1,5 +1,5 @@
 .header {
-    /* display:block; */
+
 }
 
 #headerImage {
@@ -8,11 +8,11 @@
     width:100%;
 }
 
-.topHeader h1 {
+/* .topHeader h1 {
     display:block-inline;
     position: relative;
     float:left;
-}
+} */
 
 .bottomHeader #headerImage {
     padding-top:1rem;
@@ -20,4 +20,28 @@
 
 .pageTitle {
     font-size:3rem;
+    display:block-inline;
+    position: relative;
+    float:left;
+}
+
+/* Custom, iPhone Retina */ 
+@media only screen and (min-width : 320px) {
+    .pageTitle {
+        font-size:4rem;
+        text-align:center;
+        right:7px;
+        font-family:  'Playfair Display';
+        padding-left:1rem;
+        text-decoration: overline;
+        color:rgba(58, 26, 11, 0.918);
+        /* border:5px red solid */
+    }
+
+    #headerImage {
+        height:50px;
+        margin:0;
+        padding:0;
+        width:100%;
+    }
 }

@@ -21,7 +21,7 @@ class Article extends React.Component {
 
     render () {
         return (
-            <div>
+            <div className="arti">
                 {this.state.loading && <LoadingComp />}
                 {!this.state.loading && <ArticleText article={this.state.article} comments={this.state.comments}/>}
             </div>

@@ -1,6 +1,5 @@
 .topicStrapIterator {
-    /* border:solid 5px black;  */
-    padding-left:0.3rem;
+    /* border:solid 2px red;  */
     max-width:600px;
     max-height:100%;
 }
@@ -9,14 +8,11 @@ ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    /* padding-left:0.3rem; */
     overflow: hidden;
-    /* max-height:2rem; */
 }
 
 ul li {
     float: left;
-
     width:25%;
 }
 
@@ -42,4 +38,22 @@ ul li .topicMenuButtons:hover {
 ul li .topicMenuButtons:focus {
     background-color:rgba(50, 89, 116, 0.37);
     color: rgb(245, 245, 245);
+}
+@media only screen and (min-width : 320px) {
+    #allButton {
+        text-align:center;
+    }
+    ul li .topicMenuButtons {
+        display: block;
+        color: black;
+        text-align: center;
+        border-radius: 0.4rem;
+        text-decoration: none;
+        background-color:rgba(235, 177, 60, 0.034);
+        border:solid rgba(220, 220, 220, 0.192) 0.5px;
+        transition: background-color 0.2s ease;
+        height:40px;    
+        line-height: 0px;
+        border:solid rgba(135, 131, 143, 0.199) 0.5px;
+    }
 }

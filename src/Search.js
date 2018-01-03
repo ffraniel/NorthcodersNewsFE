@@ -17,7 +17,7 @@ class Search extends React.Component {
                 <dfn data-info="I have not implemented the search functionality on this demo. This may be added at a later date...">
                     <form onSubmit={this.handleSubmit}>
                         Search
-                        <input type="text" value={this.state.searchVal} onChange={this.handleChange} />
+                        <input className="searchInput" type="text" value={this.state.searchVal} onChange={this.handleChange} />
                         <input type="submit" value="Submit" />
                     </form> 
                 </dfn>
