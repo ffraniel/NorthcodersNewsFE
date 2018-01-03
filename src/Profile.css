@@ -55,3 +55,12 @@
         text-align: center;
     }
 }
+    /* Iphone plus*/ 
+    @media only screen and (min-width : 414px) {
+        .profileDetails h1 {
+            font-size:2.5rem;
+        }
+        .otherUsers h3 {
+            font-size:1.5rem;
+        }
+    }

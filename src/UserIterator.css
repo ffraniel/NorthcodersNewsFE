@@ -11,3 +11,14 @@
         background-color:rgba(204, 202, 202, 0.308); 
     }
 }
+/* Iphone plus*/ 
+@media only screen and (min-width : 414px) {
+    .userIterator {
+
+    }
+    .usersInList {
+        font-size:1.2rem;
+        font-weight: 900;
+        height:30px;
+    }
+}
