@@ -5,11 +5,11 @@ import "./UserIterator.css";
 class UserIterator extends React.Component {
   render() {
     return (
-      <ul className="UserIterator">
+      <ul className="userIterator">
         {this.props.allUsers.map((user, index) => {
           return (
             <li className="usersInList" key={index}>
-              <NavLink to={`/users/${user.username}`} >{user.username}</NavLink>
+              <NavLink className="textUserList"to={`/users/${user.username}`} >{user.username}</NavLink>
             </li>
 
           );
