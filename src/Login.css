@@ -56,6 +56,19 @@
         padding-left:5px;
         padding-top:-25px;
     }
+    #submitLogin {
+        width: 100%;
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        }
+    
+        #textLogin {
+            width:100%;
+        }
 }
 /* Iphone plus standards */ 
 @media only screen and (min-width : 414px) {
