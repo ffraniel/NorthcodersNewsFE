@@ -1,12 +1,12 @@
-/* Custom, iPhone Retina */ 
-@media only screen and (min-width : 320px) {
+/* Custom, iPhone Retina and below -320px the main focus */ 
+@media only screen and (max-width : 359px) { 
     .login {
         margin-top:-30px;
-        padding:3px;
+        /* padding:3px; */
         left:-14px;
-        display:block;
-        position: relative;
-        float:left;
+        /* display:block; */
+        /* position: relative;
+        float:left; */
         border:solid rgba(75, 66, 66, 0.062) 0.2px;
         background-color:rgba(146, 177, 174, 0.137);
         height:200px;
@@ -40,7 +40,7 @@
   /* Galaxy S6 standard */ 
   @media only screen and (min-width : 360px) {
     .login {
-        left:-30px;
+        /* left:-30px; */
         border:solid rgba(75, 66, 66, 0.062) 0.3px;
         background-color:rgba(146, 177, 174, 0.137);
         height:200px;
