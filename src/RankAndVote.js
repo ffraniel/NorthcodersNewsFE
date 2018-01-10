@@ -24,21 +24,29 @@ class RankAndVote extends Component {
     }
     handleVoteUp(event) {
         event.preventDefault();
+        let num = this.state.preLoadNumber + 1;
+        this.setState({
+            preLoadNumber:num
+        })
         this.upVote();
     }
     handleVoteDown(event) {
         event.preventDefault();
+        let num =  this.state.preLoadNumber - 1;
+        this.setState({
+            preLoadNumber:num
+        })
         this.downVote();
     }
 
     upVote () {
         return fetch(`https://vast-tundra-92428.herokuapp.com/api/articles/${this.props.post._id}/?vote=up`, {method:'put'})
         .then(resBuffer =>{ return resBuffer;})
-        .then((res)=>{
-          let num = this.state.preLoadNumber + 1;  
-          this.setState({
-              preLoadNumber:num
-          })
+        .then(()=>{
+        //   let num = this.state.preLoadNumber + 1;  
+        //   this.setState({
+        //       preLoadNumber:num
+        //   })
         })
         .catch(console.log)
       }
@@ -46,11 +54,11 @@ class RankAndVote extends Component {
       downVote () {
         return fetch(`https://vast-tundra-92428.herokuapp.com/api/articles/${this.props.post._id}/?vote=down`, {method:'put'})
         .then(resBuffer =>{ return resBuffer;})
-        .then((res)=>{
-            let num = this.state.preLoadNumber - 1;  
-            this.setState({
-                preLoadNumber:num
-            })
+        .then(()=>{
+            // let num = this.state.preLoadNumber - 1;  
+            // this.setState({
+            //     preLoadNumber:num
+            // })
         })
         .catch(console.log)
       }
