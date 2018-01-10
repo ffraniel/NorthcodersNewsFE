@@ -43,10 +43,6 @@ class RankAndVote extends Component {
         return fetch(`https://vast-tundra-92428.herokuapp.com/api/articles/${this.props.post._id}/?vote=up`, {method:'put'})
         .then(resBuffer =>{ return resBuffer;})
         .then(()=>{
-        //   let num = this.state.preLoadNumber + 1;  
-        //   this.setState({
-        //       preLoadNumber:num
-        //   })
         })
         .catch(console.log)
       }
@@ -55,10 +51,6 @@ class RankAndVote extends Component {
         return fetch(`https://vast-tundra-92428.herokuapp.com/api/articles/${this.props.post._id}/?vote=down`, {method:'put'})
         .then(resBuffer =>{ return resBuffer;})
         .then(()=>{
-            // let num = this.state.preLoadNumber - 1;  
-            // this.setState({
-            //     preLoadNumber:num
-            // })
         })
         .catch(console.log)
       }
