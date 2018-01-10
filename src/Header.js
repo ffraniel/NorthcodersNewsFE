@@ -4,7 +4,7 @@ import Login from './Login';
 import './Header.css';
 import TopicStrap from './TopicStrap';
 
-class Header extends React.Component {
+class Header extends Component {
 
     render () {
         return (

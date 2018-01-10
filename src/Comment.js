@@ -4,7 +4,7 @@ import LoadingComp from "./LoadingComp";
 import ArticleComments from "./ArticleComments";
 import CommentForm from "./CommentForm";
 
-class Comment extends React.Component {
+class Comment extends Component {
   constructor(props) {
     super(props);
     this.state = {

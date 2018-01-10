@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './NoMatch.css';
 
-class NoMatch extends React.Component {
+class NoMatch extends Component {
     render () {
         return (
             <div>

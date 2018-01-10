@@ -3,7 +3,7 @@ import "./List.css";
 import { Link } from "react-router-dom";
 import RankAndVote from './RankAndVote';
 
-class ListItem extends React.Component {
+class ListItem extends Component {
   render() {
     return (
       <div className="listIterator">

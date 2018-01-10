@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {NavLink} from 'react-router-dom';
 import './TopicStrapIterator.css';
 
-class TopicStrapIterator extends React.Component {
+class TopicStrapIterator extends Component {
     render() {
         return (
             <div className="topicStrapIterator">

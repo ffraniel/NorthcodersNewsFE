@@ -10,7 +10,7 @@ import NoMatch from './NoMatch';
 import Profile from './Profile';
 import Search from './Search';
 
-class App extends React.Component {
+class App extends Component {
   constructor(props) {
     super(props);
     this.state=({

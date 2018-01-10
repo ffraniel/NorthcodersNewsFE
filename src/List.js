@@ -3,7 +3,7 @@ import './List.css';
 import ListItems from './ListItems';
 import LoadingComp from './LoadingComp';
 
-class List extends React.Component {
+class List extends Component {
     constructor(props) {
         super(props);
         this.state = ({

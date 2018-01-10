@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './CommentForm.css';
 
-class CommentForm extends React.Component {
+class CommentForm extends Component {
     constructor(props) {
         super(props);
         this.state=({

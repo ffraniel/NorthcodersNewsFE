@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import {NavLink } from "react-router-dom";
 import "./UserIterator.css";
 
-class UserIterator extends React.Component {
+class UserIterator extends Component {
   render() {
     return (
       <ul className="userIterator">

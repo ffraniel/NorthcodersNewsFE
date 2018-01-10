@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './LoadingComp.css';
 
-class LoadingComp extends React.Component {
+class LoadingComp extends Component {
         render () {
         return (
             <div>

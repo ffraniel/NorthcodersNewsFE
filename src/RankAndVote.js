@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./RankAndVote.css";
 
-class RankAndVote extends React.Component {
+class RankAndVote extends Component {
     constructor(props) {
         super(props);
         this.state=({

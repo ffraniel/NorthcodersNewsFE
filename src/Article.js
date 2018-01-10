@@ -3,7 +3,7 @@ import './Article.css';
 import LoadingComp from './LoadingComp';
 import ArticleText from './ArticleText';
 
-class Article extends React.Component {
+class Article extends Component {
     constructor(props) {
         super(props)
         this.state=({

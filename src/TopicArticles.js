@@ -3,7 +3,7 @@ import './TopicArticles.css';
 import LoadingComp from './LoadingComp';
 import ListItems from './ListItems';
 
-class TopicArticles extends React.Component {
+class TopicArticles extends Component {
     constructor(props) {
         super(props);
         this.state = ({

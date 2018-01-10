@@ -3,7 +3,7 @@ import './TopicStrap.css';
 import LoadingComp from './LoadingComp';
 import TopicStrapIterator from './TopicStrapIterator';
 
-class TopicStrap extends React.Component {
+class TopicStrap extends Component {
     constructor(props) {
         super(props);
         this.state=({

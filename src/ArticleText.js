@@ -3,7 +3,7 @@ import {Link} from "react-router-dom";
 import "./ArticleText.css";
 import RankAndVote from './RankAndVote';
 
-class ArticleText extends React.Component {
+class ArticleText extends Component {
   render() {
     return (
       <div className="articleBox">

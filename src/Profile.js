@@ -2,9 +2,8 @@ import React, { Component } from 'react';
 import './Profile.css';
 import LoadingComp from './LoadingComp';
 import UserIterator from './UserIterator';
-import ProfilePosts from './ProfilePosts';
 
-class Profile extends React.Component {
+class Profile extends Component {
     constructor (props) {
         super(props);
         this.state=({

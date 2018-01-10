@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./CommentsRankAndVote.css";
 
-class CommentsRankAndVote extends React.Component {
+class CommentsRankAndVote extends Component {
     constructor(props) {
         super(props);
         this.state=({
