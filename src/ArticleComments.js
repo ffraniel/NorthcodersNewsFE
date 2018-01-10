@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom';
 import "./ArticleComments.css";
 import CommentsRankAndVote from './CommentsRankAndVote';
 
-class ArticleComments extends React.Component {
+class ArticleComments extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -25,12 +25,12 @@ class ArticleComments extends React.Component {
                 Submitted a few hours ago by <Link to={`/users/${comment.created_by}`}>{comment.created_by}</Link>
               </p>
               <div className="listLinks">
-                <a href="#" onClick={scrollToCommenter}>
-                  <p>reply</p>
-                </a>
-                <a href="#" commentid={comment._id} onClick={this.deleteHandler.bind(this, comment) }> 
-                  <p>delete</p>
-                </a>
+                <button href="#" onClick={scrollToCommenter}>
+                  reply
+                </button>
+                <button href="#" commentid={comment._id} onClick={this.deleteHandler.bind(this, comment) }> 
+                  delete
+                </button>
               </div>
               </div>
             </div>
