@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import './App.css';
-import Header from './Header';
-import List from './List';
-import Article from './Article';
-import TopicArticles from './TopicArticles';
-import Comment from './Comment';
-import NoMatch from './NoMatch';
-import Profile from './Profile';
-import Search from './Search';
+import Header from './Layout/Header';
+import List from './Articles/List';
+import Article from './Articles/Article';
+import TopicArticles from './Topics/TopicArticles';
+import Comment from './Comments/Comment';
+import NoMatch from './Other/NoMatch';
+import Profile from './Users/Profile';
+import Search from './Layout/Search';
 
 class App extends Component {
   constructor(props) {

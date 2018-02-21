@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './List.css';
 import ListItems from './ListItems';
-import LoadingComp from './LoadingComp';
+import LoadingComp from '../Other/LoadingComp';
 
 class List extends Component {
     constructor(props) {

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
 import Login from './Login';
 import './Header.css';
-import TopicStrap from './TopicStrap';
+import TopicStrap from '../Topics/TopicStrap';
 
 class Header extends Component {
 

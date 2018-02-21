@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './TopicStrap.css';
-import LoadingComp from './LoadingComp';
+import LoadingComp from '../Other/LoadingComp';
 import TopicStrapIterator from './TopicStrapIterator';
 
 class TopicStrap extends Component {

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './TopicArticles.css';
-import LoadingComp from './LoadingComp';
-import ListItems from './ListItems';
+import LoadingComp from '../Other/LoadingComp';
+import ListItems from '../Articles/ListItems';
 
 class TopicArticles extends Component {
     constructor(props) {

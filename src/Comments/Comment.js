@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./Comment.css";
-import LoadingComp from "./LoadingComp";
+import LoadingComp from "../Other/LoadingComp";
 import ArticleComments from "./ArticleComments";
 import CommentForm from "./CommentForm";
 

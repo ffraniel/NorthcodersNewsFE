@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Article.css';
-import LoadingComp from './LoadingComp';
+import LoadingComp from '../Other/LoadingComp';
 import ArticleText from './ArticleText';
 
 class Article extends Component {

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Profile.css';
-import LoadingComp from './LoadingComp';
+import LoadingComp from '../Other/LoadingComp';
 import UserIterator from './UserIterator';
 
 class Profile extends Component {

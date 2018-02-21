@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./List.css";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import RankAndVote from './RankAndVote';
 
 class ListItem extends Component {
@@ -15,9 +15,9 @@ class ListItem extends Component {
                 <Link to={`/${post._id}/article`}>
                   <h2 className="artTitle">{post.title}</h2>
                 </Link>
-                <Link  to={`/topics/${post.belongs_to}/articles`}>
+                <NavLink  to={`/topics/${post.belongs_to}/articles`}>
                   <p className="topicLink" >{post.belongs_to.toUpperCase()}</p>
-                </Link>
+                </NavLink>
                 <p className="authoredBy">
                   Submitted a few hours ago by <Link to={`/users/${post.created_by}`}>{post.created_by}</Link>
                 </p>
