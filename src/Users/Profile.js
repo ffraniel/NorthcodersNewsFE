@@ -18,6 +18,9 @@ class Profile extends Component {
         this.getUser();
         this.getAllUsers();
     }
+    componentDidUpdate(){
+        this.getUser();
+    }
 
     render() {
         return (
@@ -32,7 +35,7 @@ class Profile extends Component {
                     <div className="otherUsers">
                         <h3>Other Users</h3>
                         {this.state.loading && <LoadingComp />}
-                        {!this.state.loading && <UserIterator allUsers={this.state.allUsers}/>}
+                        {!this.state.loading && <UserIterator allUsers={this.state.allUsers} getUser={this.getUser}/>}
                     </div>
             </div>
         )

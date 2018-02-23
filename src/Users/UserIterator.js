@@ -3,6 +3,7 @@ import {NavLink } from "react-router-dom";
 import "./UserIterator.css";
 
 class UserIterator extends Component {
+
   render() {
     return (
       <ul className="userIterator">
