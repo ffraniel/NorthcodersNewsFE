@@ -28,9 +28,9 @@ class ArticleComments extends Component {
                 <button href="#" onClick={scrollToCommenter}>
                   reply
                 </button>
-                <button href="#" commentid={comment._id} onClick={this.deleteHandler.bind(this, comment) }> 
+                {comment.created_by === 'northcoder' && <button href="#" commentid={comment._id} onClick={this.deleteHandler.bind(this, comment) }> 
                   delete
-                </button>
+                </button>}
               </div>
               </div>
             </div>
