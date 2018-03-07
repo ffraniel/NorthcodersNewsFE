@@ -23,7 +23,7 @@ class ListItem extends Component {
                 </p>
                 <div className="listLinks">
                   <Link to={`/${post._id}/comments`}>
-                    <p>{post.comments} comments-reply</p>
+                    <p>Comment</p>
                   </Link>
                 </div>
               </div>
