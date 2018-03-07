@@ -20,11 +20,12 @@ class ArticleText extends Component {
               {this.props.article.created_by}
             </Link>
           </p>
-          <div className="listLinks">
+          <p>{this.props.comments.length} Comments</p>
+          {/* <div className="listLinks">
           <Link to={`/${this.props.article._id}/comments`}>
                     <p>{this.props.comments.length} Comments - Click to Reply</p>
             </Link>
-          </div>
+          </div> */}
         </div>
       </div>
     );

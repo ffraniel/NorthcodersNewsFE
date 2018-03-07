@@ -2,13 +2,15 @@ import React, { Component } from 'react';
 import './Article.css';
 import LoadingComp from '../Other/LoadingComp';
 import ArticleText from './ArticleText';
+import CommentsUnderArticle from '../Comments/CommentsUnderArticle';
 
 class Article extends Component {
     constructor(props) {
         super(props)
         this.state=({
             article:{},
-            loading:true,
+            loadingArticles:true,
+            loadingComments:true,
             comments:[]        
         })
         this.getArticles = this.getArticles.bind(this);
@@ -23,7 +25,8 @@ class Article extends Component {
         return (
             <div className="arti">
                 {this.state.loading && <LoadingComp />}
-                {!this.state.loading && <ArticleText article={this.state.article} comments={this.state.comments}/>}
+                {!this.state.loadingArticles && <ArticleText article={this.state.article} comments={this.state.comments}/>}
+                {!this.state.loadingComments && <CommentsUnderArticle comments={this.state.comments} articleID={this.props.match.params.articleID}/>}
             </div>
         )
     }
@@ -36,7 +39,7 @@ class Article extends Component {
         .then((res)=>{
             this.setState({
                 article:res.article,
-                loading:false               
+                loadingArticles:false               
             })
         })
         .catch(console.log)
@@ -50,7 +53,7 @@ class Article extends Component {
         .then((res)=>{
             this.setState({
                 comments:res.comments,
-                loading:false,                
+                loadingComments:false,                
             })
         })
         .catch(console.log)
