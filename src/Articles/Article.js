@@ -27,23 +27,23 @@ class Article extends Component {
             </div>
         )
     }
-
+    // (`http://localhost:3000/api/articles/${this.props.match.params.articleID}
     getArticles () {
-        return fetch (`https://vast-tundra-92428.herokuapp.com/api/articles/${this.props.match.params.articleID}`)
+        return fetch (`http://localhost:3000/api/articles/${this.props.match.params.articleID}`)
         .then((resBuffer)=>{
             return resBuffer.json();
         })
         .then((res)=>{
             this.setState({
-                article:res,
+                article:res.article,
                 loading:false               
             })
         })
         .catch(console.log)
     }
-
+    // (`http://localhost:3000/api/articles/${this.props.match.params.articleID}/comments`)
     getComments () {
-        return fetch (`https://vast-tundra-92428.herokuapp.com/api/articles/${this.props.match.params.articleID}/comments`)
+        return fetch (`http://localhost:3000/api/articles/${this.props.match.params.articleID}/comments`)
         .then((resBuffer)=>{
             return resBuffer.json()
         })

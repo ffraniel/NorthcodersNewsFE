@@ -40,7 +40,7 @@ class CommentsRankAndVote extends Component {
     }
 
     upVote () {
-        return fetch(`https://vast-tundra-92428.herokuapp.com/api/comments/${this.props.post._id}/?vote=up`, {method:'put'})
+        return fetch(`http://localhost:3000/api/comments/${this.props.post._id}/?vote=up`, {method:'put'})
         .then(resBuffer =>{ return resBuffer;})
         .then(()=>{
         })
@@ -48,7 +48,7 @@ class CommentsRankAndVote extends Component {
       }
     
     downVote () {
-        return fetch(`https://vast-tundra-92428.herokuapp.com/api/comments/${this.props.post._id}/?vote=down`, {method:'put'})
+        return fetch(`http://localhost:3000/api/comments/${this.props.post._id}/?vote=down`, {method:'put'})
         .then(resBuffer =>{ return resBuffer;})
         .then(()=>{
         })

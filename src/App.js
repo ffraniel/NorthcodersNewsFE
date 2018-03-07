@@ -8,7 +8,6 @@ import TopicArticles from './Topics/TopicArticles';
 import Comment from './Comments/Comment';
 import NoMatch from './Other/NoMatch';
 import Profile from './Users/Profile';
-import Search from './Layout/Search';
 
 class App extends Component {
   constructor(props) {
@@ -22,7 +21,6 @@ class App extends Component {
       <BrowserRouter>
         <div>
         <Header />
-        <Search />
         <Switch className="container">
           <Route exact path="/" component={List} />
           <Route path="/:articleID/comments" component={Comment} />

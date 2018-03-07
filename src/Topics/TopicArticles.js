@@ -35,7 +35,7 @@ class TopicArticles extends Component {
         )};  
         
     getTopicArticles (topicName) {
-        return fetch (`https://vast-tundra-92428.herokuapp.com/api/topics/${topicName}/articles`)
+        return fetch (`http://localhost:3000/api/topics/${topicName}/articles`)
         .then((resBuffer)=>{
             return resBuffer.json()
         })

@@ -1,5 +1,6 @@
 .topicStrapIterator {
     /* border:solid 2px red;  */
+    padding-top:5px;
     max-width:768px;
     max-height:100%;
 }

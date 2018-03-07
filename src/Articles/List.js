@@ -26,9 +26,9 @@ class List extends Component {
         )};  
 
     getPosts () {
-        return fetch ('https://vast-tundra-92428.herokuapp.com/api/articles')
+        return fetch ('http://localhost:3000/api/articles')
         .then((resBuffer)=>{
-            return resBuffer.json()
+            return resBuffer.json();
         })
         .then((res)=>{
             this.setState({

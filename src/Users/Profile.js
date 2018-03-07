@@ -42,7 +42,7 @@ class Profile extends Component {
     }
 
     getUser () {
-        return fetch(`https://vast-tundra-92428.herokuapp.com/api/users/${this.props.match.params.userID.toLowerCase()}`)
+        return fetch(`http://localhost:3000/api/users/${this.props.match.params.userID.toLowerCase()}`)
         .then((resBuffer)=>{
             return resBuffer.json();
         })
@@ -55,7 +55,7 @@ class Profile extends Component {
     }
 
     getAllUsers () {
-        return fetch('https://vast-tundra-92428.herokuapp.com/api/users/')
+        return fetch('http://localhost:3000/api/users/')
         .then((resBuffer)=>{
             return resBuffer.json();
         })
