@@ -10,9 +10,11 @@
 }
 
 .articleBox {
-    border:solid gainsboro 2px;
-    display:block;
+    border:solid gainsboro 1.5px;
+    border-radius:2px;
     width:100%;
+    max-width: 1400px;
+    margin: auto;
 }
 
 /* .commentEntry  */
@@ -37,9 +39,7 @@
 }
 
 .articleBox {
-    max-width: 1400px;
-    margin: auto;
-    margin-left:55px;
+
 }
 
 /* Custom, iPhone Retina */ 

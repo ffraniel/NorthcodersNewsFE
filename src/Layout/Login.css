@@ -3,13 +3,11 @@
     .login {
         margin-top:-30px;
         /* padding:3px; */
-        left:-14px;
+        left:0px;
         /* display:block; */
-        /* position: relative;
-        float:left; */
         border:solid rgba(75, 66, 66, 0.062) 0.2px;
         background-color:rgba(146, 177, 174, 0.137);
-        height:200px;
+        max-height:200px;
         /* consider adding min and max height */
         border-radius:7px;
     }
@@ -41,7 +39,7 @@
   /* Galaxy S6 standard */ 
   @media only screen and (min-width : 360px) {
     .login {
-        /* left:-30px; */
+        left:-35px;
         border:solid rgba(75, 66, 66, 0.062) 0.3px;
         background-color:rgba(146, 177, 174, 0.137);
         height:200px;
