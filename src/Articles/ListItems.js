@@ -22,7 +22,7 @@ class ListItem extends Component {
                   Submitted a few hours ago by <Link to={`/users/${post.created_by}`}>{post.created_by}</Link>
                 </p>
                 <div className="listLinks">
-                  <Link to={`/${post._id}/comments`}>
+                  <Link to={`/${post._id}/article`}>
                     <p>Comment</p>
                   </Link>
                 </div>
