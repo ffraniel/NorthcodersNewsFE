@@ -21,11 +21,6 @@ class ArticleText extends Component {
             </Link>
           </p>
           <p>{this.props.comments.length} Comments</p>
-          {/* <div className="listLinks">
-          <Link to={`/${this.props.article._id}/comments`}>
-                    <p>{this.props.comments.length} Comments - Click to Reply</p>
-            </Link>
-          </div> */}
         </div>
       </div>
     );
