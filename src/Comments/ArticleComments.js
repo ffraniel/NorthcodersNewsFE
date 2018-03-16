@@ -25,10 +25,10 @@ class ArticleComments extends Component {
                 Submitted a few hours ago by <Link to={`/users/${comment.created_by}`}>{comment.created_by}</Link>
               </p>
               <div className="listLinks">
-                <button href="#" onClick={scrollToCommenter}>
+                <button onClick={scrollToCommenter}>
                   reply
                 </button>
-                {comment.created_by === 'northcoder' && <button href="#" commentid={comment._id} onClick={this.deleteHandler.bind(this, comment) }> 
+                {comment.created_by === 'northcoder' && <button commentid={comment._id} onClick={this.deleteHandler.bind(this, comment) }> 
                   delete
                 </button>}
               </div>
