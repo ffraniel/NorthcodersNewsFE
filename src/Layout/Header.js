@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
-import Login from './Login';
 import './Header.css';
 import TopicStrap from '../Topics/TopicStrap';
+import StatsBox from './StatsBox';
 
 class Header extends Component {
 
@@ -15,8 +15,8 @@ class Header extends Component {
                             <h1 className="pageTitle">Saiddit News</h1>
                         </Link>
                     </div>
-                    <Login />
                 </div>
+                <StatsBox />
                 <div className="bottomHeader">
                     <div className="headImgCont">
                         <img id="headerImage" src="https://www.redditstatic.com/listingsignupbar-orbit-1.png" alt="reddit style header background" />

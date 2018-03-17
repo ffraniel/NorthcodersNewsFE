@@ -1,0 +1,71 @@
+@media only screen and (max-width: 318px) {
+    .statsBox {
+        width:100%;
+    }
+}
+
+/* Custom, iPhone Retina and below -320px the main focus */ 
+@media only screen and (min-width : 319px) { 
+    .statsBox{
+        float:center;
+        width:100%;
+        
+    }
+}
+  /* Galaxy S6 standard */ 
+  @media only screen and (min-width : 360px) {
+    .statsBox{
+        float:center;
+        width: 100%;
+    }
+    
+}
+/* Iphone plus standards */ 
+@media only screen and (min-width : 414px) {
+    .statsBox{
+        float:right;
+        width:100%;
+
+    }
+}
+/* Small Devices, Tablets */ 
+@media only screen and (min-width : 768px) {
+    .statsBox{
+        float:right;
+        width:280px;
+        max-width: 280px;
+    }
+}
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+
+}
+.posterDiv {
+    /* border:red solid 0.5px; */
+    text-align: center;
+}
+.statsBox {
+    display:block-inline;
+    position: relative;
+    float:right;
+    background-color:rgba(146, 177, 174, 0.137);
+    border-radius:7px;
+    border:solid rgba(75, 66, 66, 0.062) 0.5px;
+}
+.statsBox h4{
+    text-align: center;
+    /* padding-left:10px; */
+}
+.numOfArticles{
+    text-align: center;
+    /* padding-left:10px; */
+}
+.posterName {
+    font-weight:900;
+}
+.posterImage{
+    max-height: 200px;
+    max-width: 200px;
+    border-radius: 8px;
+    text-align: center;
+}
