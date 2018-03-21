@@ -6,7 +6,9 @@ Saiddit News is a Reddit News clone using React JS. It is being fed by a RESTful
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system. You will need a back-end running to provide the JSON for us to render. To do so either use the currently deployed https://vast-tundra-92428.herokuapp.com/ version or go to https://github.com/ffraniel/BE-northcoders-news and follow the instructions to install the back end locally and run it. 
+
+This React app runs on localhost:5000 to accommodate the back end running on localhost:3000. 
 
 ### Prerequisites
 
