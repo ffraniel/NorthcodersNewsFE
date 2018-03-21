@@ -3,6 +3,7 @@ import "./Article.css";
 import LoadingComp from "../Other/LoadingComp";
 import ArticleText from "./ArticleText";
 import CommentsUnderArticle from "../Comments/CommentsUnderArticle";
+import PropTypes from 'prop-types';
 
 class Article extends Component {
   constructor(props) {
@@ -73,5 +74,13 @@ class Article extends Component {
       .catch(console.log);
   }
 }
+
+Article.propTypes = {
+  match: PropTypes.shape({
+    params: PropTypes.shape({
+        articleID: PropTypes.string
+    }).isRequired
+  }).isRequired
+};
 
 export default Article;

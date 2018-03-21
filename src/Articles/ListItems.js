@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./List.css";
 import { Link, NavLink } from "react-router-dom";
 import RankAndVote from './RankAndVote';
+import PropTypes from 'prop-types';
 
 class ListItem extends Component {
   render() {
@@ -34,5 +35,9 @@ class ListItem extends Component {
     );
   }
 }
+
+ListItem.propTypes = {
+  posts: PropTypes.array
+};
 
 export default ListItem;

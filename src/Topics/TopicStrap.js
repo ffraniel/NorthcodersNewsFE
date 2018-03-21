@@ -38,6 +38,6 @@ class TopicStrap extends Component {
         });
       });
   }
-};
+}
 
 export default TopicStrap;

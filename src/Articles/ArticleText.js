@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import {Link} from "react-router-dom";
 import "./ArticleText.css";
 import RankAndVote from './RankAndVote';
+import PropTypes from 'prop-types';
 
 class ArticleText extends Component {
   render() {
@@ -26,5 +27,10 @@ class ArticleText extends Component {
     );
   }
 }
+
+ArticleText.propTypes = {
+  article: PropTypes.object,
+  comments: PropTypes.array
+};
 
 export default ArticleText;

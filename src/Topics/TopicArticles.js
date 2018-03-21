@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './TopicArticles.css';
 import LoadingComp from '../Other/LoadingComp';
 import ListItems from '../Articles/ListItems';
+import PropTypes from 'prop-types';
 
 class TopicArticles extends Component {
     constructor(props) {
@@ -10,7 +11,7 @@ class TopicArticles extends Component {
             posts:[],
             searchVal:'',
             loading:true
-        })
+        });
         this.getTopicArticles = this.getTopicArticles.bind(this);
     }
     componentDidMount() {
@@ -22,7 +23,7 @@ class TopicArticles extends Component {
         const currentTopic = this.props.match.params.topic.toLowerCase();
         const nextTopic = nextProps.match.params.topic.toLowerCase();
         if (currentTopic !== nextTopic) {
-            this.getTopicArticles(nextTopic)
+            this.getTopicArticles(nextTopic);
         }
       }
 
@@ -32,21 +33,30 @@ class TopicArticles extends Component {
                     {this.state.loading && <LoadingComp />}
                     {!this.state.loading && <ListItems posts={this.state.posts}/>}
             </div>
-        )};  
+        );
+    }  
         
     getTopicArticles (topicName) {
         return fetch (`http://localhost:3000/api/topics/${topicName}/articles`)
         .then((resBuffer)=>{
-            return resBuffer.json()
+            return resBuffer.json();
         })
         .then((res)=>{
             this.setState({
                 posts:res.articles,
                 loading:false,                
-            })
+            });
         })
-        .catch(console.log)
+        .catch(console.log);
     }
 }
+
+TopicArticles.propTypes = {
+    match: PropTypes.shape({
+        params: PropTypes.shape({
+            topic:PropTypes.string
+        }).isRequired,
+    }).isRequired
+  };
 
 export default TopicArticles;

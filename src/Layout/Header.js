@@ -24,7 +24,7 @@ class Header extends Component {
                 </div>
                 <TopicStrap />
             </div>
-        )
+        );
     }
 }
 

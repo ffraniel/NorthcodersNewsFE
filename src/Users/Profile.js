@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './Profile.css';
 import LoadingComp from '../Other/LoadingComp';
 import UserIterator from './UserIterator';
+import PropTypes from 'prop-types';
 
 class Profile extends Component {
     constructor (props) {
@@ -10,7 +11,7 @@ class Profile extends Component {
             user:[],
             allUsers:[],
             loading:true,
-        })
+        });
         this.getUser = this.getUser.bind(this);
         this.getAllUsers = this.getAllUsers.bind(this);
     }
@@ -38,7 +39,7 @@ class Profile extends Component {
                         {!this.state.loading && <UserIterator allUsers={this.state.allUsers} getUser={this.getUser}/>}
                     </div>
             </div>
-        )
+        );
     }
 
     getUser () {
@@ -49,9 +50,9 @@ class Profile extends Component {
         .then((res)=>{
             this.setState({
                 user:res.users[0]
-            })
+            });
         })
-        .catch(console.log)
+        .catch(console.log);
     }
 
     getAllUsers () {
@@ -63,10 +64,18 @@ class Profile extends Component {
             this.setState({
                 allUsers:res.users,
                 loading:false
-            })
+            });
         })
-        .catch(console.log)
+        .catch(console.log);
     }
 }
+
+Profile.propTypes = {
+    match: PropTypes.shape({
+        params: PropTypes.shape({
+            userID: PropTypes.string
+        }).isRequired,
+    }).isRequired
+};
 
 export default Profile;

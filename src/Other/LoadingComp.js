@@ -7,7 +7,7 @@ class LoadingComp extends Component {
             <div>
                 <div className="spinner">Loading...</div>
             </div>
-        )
+        );
     }
 }
 

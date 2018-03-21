@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {NavLink} from 'react-router-dom';
 import './TopicStrapIterator.css';
+import PropTypes from 'prop-types';
 
 class TopicStrapIterator extends Component {
     render() {
@@ -13,11 +14,16 @@ class TopicStrapIterator extends Component {
                         <li key={index} ><NavLink className="topicMenuButtons" topicactive={ {color:'green'} } to={`/topics/${topic.title}/articles`}>
                             <h4>{topic.title}</h4>
                         </NavLink></li>
-                        )
+                        );
                     })}
                 </ul>
             </div>
-        )}
+        );
+    }
 }
+
+TopicStrapIterator.propTypes = {
+    topics: PropTypes.array
+};
 
 export default TopicStrapIterator;

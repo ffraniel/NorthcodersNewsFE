@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './CommentForm.css';
+import PropTypes from 'prop-types';
 
 class CommentForm extends Component {
     constructor(props) {
@@ -20,7 +21,7 @@ class CommentForm extends Component {
                     <button type="submit" value={"Submit"} className="commentButton">Post Comment</button>
                 </form>
             </div>
-        )
+        );
     }
 
     handleChange(event) {
@@ -29,8 +30,13 @@ class CommentForm extends Component {
     handleSubmit(event) {
         event.preventDefault();
         this.props.addComment(`{"comment": "${this.state.value}"}`, this.state.articleID);
-        this.setState({value:''})
+        this.setState({value:''});
     }
 }
+
+CommentForm.propTypes = {
+    articleID: PropTypes.string,
+    addComment: PropTypes.func
+};
 
 export default CommentForm;

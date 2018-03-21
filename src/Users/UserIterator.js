@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
 import "./UserIterator.css";
+import PropTypes from 'prop-types';
 
 class UserIterator extends Component {
   render() {
@@ -19,5 +20,9 @@ class UserIterator extends Component {
     );
   }
 }
+
+UserIterator.propTypes = {
+  allUsers: PropTypes.array
+};
 
 export default UserIterator;

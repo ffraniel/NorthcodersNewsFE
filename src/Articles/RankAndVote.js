@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./RankAndVote.css";
+import PropTypes from 'prop-types';
 
 class RankAndVote extends Component {
   constructor(props) {
@@ -69,5 +70,9 @@ class RankAndVote extends Component {
       .catch(console.log);
   }
 }
+
+RankAndVote.propTypes = {
+  post: PropTypes.object
+};
 
 export default RankAndVote;

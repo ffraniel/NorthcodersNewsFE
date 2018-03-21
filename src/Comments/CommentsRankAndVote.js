@@ -1,12 +1,13 @@
 import React, { Component } from "react";
 import "./CommentsRankAndVote.css";
+import PropTypes from 'prop-types';
 
 class CommentsRankAndVote extends Component {
     constructor(props) {
         super(props);
         this.state=({
             preLoadNumber:0
-        })
+        });
         this.upVote = this.upVote.bind(this);
         this.downVote = this.downVote.bind(this);
         this.handleVoteDown = this.handleVoteDown.bind(this);
@@ -20,14 +21,14 @@ class CommentsRankAndVote extends Component {
                 <p className="numOfCommentsVotes">{(this.props.post.votes + this.state.preLoadNumber).toString()}</p>
                 <button onClick={this.handleVoteDown}><i className="fa fa-hand-o-down"></i></button>
               </div>
-        )
+        );
     }
     handleVoteUp(event) {
         event.preventDefault();
         let num = this.state.preLoadNumber + 1;  
         this.setState({
             preLoadNumber:num
-        })
+        });
         this.upVote();
     }
     handleVoteDown(event) {
@@ -35,7 +36,7 @@ class CommentsRankAndVote extends Component {
         let num = this.state.preLoadNumber - 1;  
         this.setState({
             preLoadNumber:num
-        })
+        });
         this.downVote();
     }
 
@@ -44,7 +45,7 @@ class CommentsRankAndVote extends Component {
         .then(resBuffer =>{ return resBuffer;})
         .then(()=>{
         })
-        .catch(console.log)
+        .catch(console.log);
       }
     
     downVote () {
@@ -52,8 +53,12 @@ class CommentsRankAndVote extends Component {
         .then(resBuffer =>{ return resBuffer;})
         .then(()=>{
         })
-        .catch(console.log)
+        .catch(console.log);
     }
 }
+
+CommentsRankAndVote.propTypes = {
+    post: PropTypes.object
+};
 
 export default CommentsRankAndVote;

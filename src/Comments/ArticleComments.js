@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import {Link} from 'react-router-dom';
 import "./ArticleComments.css";
 import CommentsRankAndVote from './CommentsRankAndVote';
+import PropTypes from 'prop-types';
 
 class ArticleComments extends Component {
   constructor(props) {
@@ -48,7 +49,12 @@ function scrollToCommenter (event) {
   event.preventDefault();
   document.querySelector('.commentForm').scrollIntoView({ 
     behavior: 'smooth' 
-  })
+  });
 }
+
+ArticleComments.propTypes = {
+  comments: PropTypes.array,
+  deleteComment: PropTypes.func
+};
 
 export default ArticleComments;

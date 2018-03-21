@@ -3,6 +3,7 @@ import "./Comment.css";
 import LoadingComp from "../Other/LoadingComp";
 import ArticleComments from "./ArticleComments";
 import CommentForm from "./CommentForm";
+import PropTypes from 'prop-types';
 
 class Comment extends Component {
   constructor(props) {
@@ -92,18 +93,18 @@ class Comment extends Component {
     .then((resBuffer)=>{
         return resBuffer.json();
     })
-    .then((res)=>{
+    .then(()=>{
         var prevStateComments = this.state.comments;
         for(var i = 0; i < prevStateComments.length; i ++) {
             if(comment._id === prevStateComments[i]._id) {
-                prevStateComments.splice(i, 1)
+                prevStateComments.splice(i, 1);
             }
         }
         this.setState({
             comments:prevStateComments
         });
     })
-    .catch(console.log)
+    .catch(console.log);
   }
 
   getTitle(artID) {
@@ -128,7 +129,15 @@ function scrollToCommenter (event) {
   event.preventDefault();
   document.querySelector('.commentForm').scrollIntoView({ 
     behavior: 'smooth' 
-  })
+  });
 }
+
+Comment.propTypes = {
+  match: PropTypes.shape({
+    params: PropTypes.shape({
+      articleID: PropTypes.string
+    })
+  })
+};
 
 export default Comment;
