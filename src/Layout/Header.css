@@ -8,14 +8,18 @@
     width:100%;
 }
 
-/* .topHeader h1 {
-    display:block-inline;
-    position: relative;
-    float:left;
-} */
-
 .bottomHeader #headerImage {
     padding-top:1rem;
+}
+@keyframes fallInFade {
+    from {
+        top:-100px;
+        opacity:0;
+    }
+    to {
+        top:0px;
+        opacity:1;
+    }
 }
 
 .pageTitle {
@@ -23,6 +27,8 @@
     display:block-inline;
     position: relative;
     float:left;
+    animation-name:fallInFade;
+    animation-duration: 1s;
 }
 
 /* Custom, iPhone Retina */ 

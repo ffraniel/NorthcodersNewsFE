@@ -42,10 +42,11 @@
     background-color:rgba(146, 177, 174, 0.137);
     border-radius:7px;
     border:solid rgba(75, 66, 66, 0.062) 0.5px;
+        animation-name:statsFade;
+    animation-duration: 1s;
 }
 .statsBox h4{
     text-align: center;
-    /* padding-left:10px; */
 }
 .numOfArticles{
     text-align: center;
@@ -59,4 +60,14 @@
     max-width: 200px;
     border-radius: 8px;
     text-align: center;
+}
+@keyframes statsFade {
+    from {
+        top:-100px;
+        opacity:0;
+    }
+    to {
+        top:0px;
+        opacity:1;
+    }
 }

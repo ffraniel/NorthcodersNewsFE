@@ -1,0 +1,13 @@
+.topicStrap {
+    animation-name:topicFade;
+    animation-duration: 1.5s;
+}
+
+@keyframes topicFade {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
