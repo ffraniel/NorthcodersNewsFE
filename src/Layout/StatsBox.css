@@ -1,32 +1,22 @@
 @media only screen and (max-width: 318px) {
     .statsBox {
-        width:100%;
+        display:none;
     }
 }
 
 /* Custom, iPhone Retina and below -320px the main focus */ 
 @media only screen and (min-width : 319px) { 
     .statsBox{
-        float:center;
-        width:100%;
-        
+        display:none;
     }
 }
   /* Galaxy S6 standard */ 
   @media only screen and (min-width : 360px) {
-    .statsBox{
-        float:center;
-        width: 100%;
-    }
     
 }
 /* Iphone plus standards */ 
 @media only screen and (min-width : 414px) {
-    .statsBox{
-        float:right;
-        width:100%;
 
-    }
 }
 /* Small Devices, Tablets */ 
 @media only screen and (min-width : 768px) {
@@ -34,6 +24,7 @@
         float:right;
         width:280px;
         max-width: 280px;
+        display:block;
     }
 }
 /* Large Devices, Wide Screens */
