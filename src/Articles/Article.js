@@ -40,7 +40,6 @@ class Article extends Component {
       </div>
     );
   }
-  // (`http://localhost:3000/api/articles/${this.props.match.params.articleID}
   getArticles() {
     return fetch(
       `http://localhost:3000/api/articles/${this.props.match.params.articleID}`
@@ -56,7 +55,6 @@ class Article extends Component {
       })
       .catch(console.log);
   }
-  // (`http://localhost:3000/api/articles/${this.props.match.params.articleID}/comments`)
   getComments() {
     return fetch(
       `http://localhost:3000/api/articles/${
