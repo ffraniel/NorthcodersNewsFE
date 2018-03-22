@@ -37,7 +37,7 @@ class CommentsUnderArticle extends Component {
 
   addComment(comment, articleID) {
     return fetch(
-      `http://localhost:3000/api/articles/${
+      `https://vast-tundra-92428.herokuapp.com/api/articles/${
         articleID
       }/comments`,
       {
@@ -67,7 +67,7 @@ class CommentsUnderArticle extends Component {
   }
 
   deleteComment(comment) {
-    return fetch (`http://localhost:3000/api/comments/${comment._id}/`,
+    return fetch (`https://vast-tundra-92428.herokuapp.com/api/comments/${comment._id}/`,
     {method:"delete"})
     .then((resBuffer)=>{
         return resBuffer.json();

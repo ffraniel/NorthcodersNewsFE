@@ -48,7 +48,7 @@ class Comment extends Component {
   }
   getComments(artID) {
     return fetch(
-      `http://localhost:3000/api/articles/${
+      `https://vast-tundra-92428.herokuapp.com/api/articles/${
         artID
       }/comments`
     )
@@ -71,7 +71,7 @@ class Comment extends Component {
 
   addComment(comment, articleID) {
     return fetch(
-      `http://localhost:3000/api/articles/${
+      `https://vast-tundra-92428.herokuapp.com/api/articles/${
         articleID
       }/comments`,
       {
@@ -101,7 +101,7 @@ class Comment extends Component {
   }
 
   deleteComment(comment) {
-    return fetch (`http://localhost:3000/api/comments/${comment._id}/`,
+    return fetch (`https://vast-tundra-92428.herokuapp.com/api/comments/${comment._id}/`,
     {method:"delete"})
     .then((resBuffer)=>{
         return resBuffer.json();
@@ -127,7 +127,7 @@ class Comment extends Component {
 
   getTitle(artID) {
     return fetch(
-      `http://localhost:3000/api/articles/${artID}`
+      `https://vast-tundra-92428.herokuapp.com/api/articles/${artID}`
     )
       .then(resBuffer => {
         return resBuffer.json();

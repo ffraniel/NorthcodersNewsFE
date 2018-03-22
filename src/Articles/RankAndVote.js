@@ -51,7 +51,7 @@ class RankAndVote extends Component {
 
   upVote() {
     return fetch(
-      `http://localhost:3000/api/articles/${this.props.post._id}/?vote=up`,
+      `https://vast-tundra-92428.herokuapp.com/api/articles/${this.props.post._id}/?vote=up`,
       { method: "put" }
     )
       .then(resBuffer => {
@@ -68,7 +68,7 @@ class RankAndVote extends Component {
 
   downVote() {
     return fetch(
-      `http://localhost:3000/api/articles/${this.props.post._id}/?vote=down`,
+      `https://vast-tundra-92428.herokuapp.com/api/articles/${this.props.post._id}/?vote=down`,
       { method: "put" }
     )
       .then(resBuffer => {

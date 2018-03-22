@@ -41,7 +41,7 @@ class StatsBox extends Component {
 
     getArticles() {
         return fetch(
-          `http://localhost:3000/api/articles`
+          `https://vast-tundra-92428.herokuapp.com/api/articles`
         )
           .then(resBuffer => {
             return resBuffer.json();
@@ -68,7 +68,7 @@ class StatsBox extends Component {
     }
 
     getPosterOfTheDay() {
-        return fetch(`http://localhost:3000/api/users`)
+        return fetch(`https://vast-tundra-92428.herokuapp.com/api/users`)
         .then((resbuffer)=>{
             return resbuffer.json();
         })
