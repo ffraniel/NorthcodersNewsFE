@@ -55,7 +55,7 @@ class Comment extends Component {
       .then(resBuffer => {
         return resBuffer.json();
       })
-      .then(res => {
+      .then((res) => {
         this.setState({
           comments: res.comments,
           loading: false
