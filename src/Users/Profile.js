@@ -12,7 +12,7 @@ class Profile extends Component {
             user:[],
             allUsers:[],
             loading:true,
-            errors:null
+            error:null
         });
         this.getUser = this.getUser.bind(this);
         this.getAllUsers = this.getAllUsers.bind(this);
@@ -29,6 +29,7 @@ class Profile extends Component {
     render() {
         return (
             <div className="profileBox">
+                    {this.state.error && <Error error={this.state.error} />}
                     <div className="profilePicBox">
                         <img src={this.state.user.avatar_url} alt="User profile" />
                     </div>
@@ -41,7 +42,6 @@ class Profile extends Component {
                         {this.state.loading && <LoadingComp />}
                         {!this.state.loading && <UserIterator allUsers={this.state.allUsers} getUser={this.getUser}/>}
                     </div>
-                    {this.state.error && <Error errors={this.state.errors} />}
             </div>
         );
     }
@@ -60,28 +60,16 @@ class Profile extends Component {
                 user:user
             });
         })
-        .catch((err)=>{
-            if (this.state.errors === null) {
-                const errorState = [];
-                errorState.push(err)
+        .catch((error)=>{
                 this.setState({
-                    errors:errorState,
+                    errors:error,
                     loading:false
-                })
-            }
-            if (this.state.errors.length > 0) {
-                const errorState = this.state.errors;
-                errorState.push(err);
-                this.setState({
-                    errors:errorState,
-                    loading:false
-                })
-            }
-        });
+                });
+            });
     }
 
     getAllUsers () {
-        return fetch('http://localhost:3000/api/users/')
+        return fetch('http://localhost:3000/api/users')
         .then((resBuffer)=>{
             return resBuffer.json();
         })
@@ -91,24 +79,12 @@ class Profile extends Component {
                 loading:false
             });
         })
-        .catch((err)=>{
-            if (this.state.errors === null) {
-                const errorState = [];
-                errorState.push(err)
-                this.setState({
-                    errors:errorState,
-                    loading:false
-                })
-            }
-            if (this.state.errors.length > 0) {
-                const errorState = this.state.errors;
-                errorState.push(err);
-                this.setState({
-                    errors:errorState,
-                    loading:false
-                })
-            }
-        })
+        .catch((error)=>{
+            this.setState({
+                errors:error,
+                loading:false
+            });
+        });
     }
 }
 

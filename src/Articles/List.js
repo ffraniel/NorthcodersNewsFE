@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./List.css";
 import ListItems from "./ListItems";
 import LoadingComp from "../Other/LoadingComp";
+import Error from '../Other/Error';
 
 class List extends Component {
   constructor(props) {
@@ -9,7 +10,8 @@ class List extends Component {
     this.state = {
       posts: [],
       searchVal: "",
-      loading: true
+      loading: true,
+      error:null
     };
     this.getPosts = this.getPosts.bind(this);
   }
@@ -20,6 +22,7 @@ class List extends Component {
   render() {
     return (
       <div className="mainList">
+        {this.state.error && <Error error={this.state.error} />}
         {this.state.loading && <LoadingComp />}
         {!this.state.loading && <ListItems posts={this.state.posts} />}
       </div>
@@ -37,7 +40,12 @@ class List extends Component {
           loading: false
         });
       })
-      .catch(console.log);
+      .catch((error)=>{
+        this.setState({
+            errors:error,
+            loading:false
+        });
+    });
   }
 }
 

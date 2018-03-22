@@ -4,6 +4,7 @@ import LoadingComp from "../Other/LoadingComp";
 import ArticleText from "./ArticleText";
 import CommentsUnderArticle from "../Comments/CommentsUnderArticle";
 import PropTypes from 'prop-types';
+import Error from '../Other/Error';
 
 class Article extends Component {
   constructor(props) {
@@ -12,7 +13,8 @@ class Article extends Component {
       article: {},
       loadingArticles: true,
       loadingComments: true,
-      comments: []
+      comments: [],
+      error:null
     };
     this.getArticles = this.getArticles.bind(this);
     this.getComments = this.getComments.bind(this);
@@ -25,6 +27,7 @@ class Article extends Component {
   render() {
     return (
       <div className="arti">
+        {this.state.error && <Error error={this.state.error} />}
         {this.state.loading && <LoadingComp />}
         {!this.state.loadingArticles && (
           <ArticleText
@@ -54,7 +57,12 @@ class Article extends Component {
           loadingArticles: false
         });
       })
-      .catch(console.log);
+      .catch((error)=>{
+        this.setState({
+            errors:error,
+            loading:false
+        });
+    });
   }
   getComments() {
     return fetch(
@@ -71,7 +79,12 @@ class Article extends Component {
           loadingComments: false
         });
       })
-      .catch(console.log);
+      .catch((error)=>{
+        this.setState({
+            errors:error,
+            loading:false
+        });
+    });
   }
 }
 

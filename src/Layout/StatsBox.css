@@ -42,7 +42,7 @@
     background-color:rgba(146, 177, 174, 0.137);
     border-radius:7px;
     border:solid rgba(75, 66, 66, 0.062) 0.5px;
-        animation-name:statsFade;
+    animation-name:statsFade;
     animation-duration: 1s;
 }
 .statsBox h4{

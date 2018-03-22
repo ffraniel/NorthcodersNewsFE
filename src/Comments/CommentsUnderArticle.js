@@ -3,12 +3,14 @@ import "./CommentsUnderArticle.css";
 import ArticleComments from "./ArticleComments";
 import CommentForm from "./CommentForm";
 import PropTypes from 'prop-types';
+import Error from '../Other/Error';
 
 class CommentsUnderArticle extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      comments: this.props.comments    
+      comments: this.props.comments,
+      error:null
     };
     this.addComment = this.addComment.bind(this);
     this.deleteComment = this.deleteComment.bind(this);
@@ -17,7 +19,10 @@ class CommentsUnderArticle extends Component {
   render() {
     return (
       <div className="commentsList">
-        <div><button className="scrollCommentButton" onClick={scrollToCommenter}>Leave Comment</button></div>
+        {this.state.error && <Error error={this.state.error} />}
+        <div>
+          <button className="scrollCommentButton" onClick={scrollToCommenter}>Leave Comment</button>
+        </div>
           <ArticleComments
             comments={this.state.comments}
             deleteComment={this.deleteComment}
@@ -53,7 +58,12 @@ class CommentsUnderArticle extends Component {
           comment: currentCommentState
         });
       })
-      .catch(console.log);
+      .catch((error)=>{
+        this.setState({
+            errors:error,
+            loading:false
+        });
+    });
   }
 
   deleteComment(comment) {
@@ -73,7 +83,12 @@ class CommentsUnderArticle extends Component {
             comments:prevStateComments
         });
     })
-    .catch(console.log);
+    .catch((error)=>{
+      this.setState({
+          errors:error,
+          loading:false
+      });
+    });
   }
 
 

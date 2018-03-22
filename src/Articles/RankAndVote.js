@@ -1,12 +1,14 @@
 import React, { Component } from "react";
 import "./RankAndVote.css";
 import PropTypes from 'prop-types';
+import Error from '../Other/Error';
 
 class RankAndVote extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      preLoadNumber: 0
+      preLoadNumber: 0,
+      error:null
     };
     this.upVote = this.upVote.bind(this);
     this.downVote = this.downVote.bind(this);
@@ -17,6 +19,7 @@ class RankAndVote extends Component {
   render() {
     return (
       <div className="rankAndVote">
+        {this.state.error && <Error error={this.state.error} />}
         <button onClick={this.handleVoteUp}>
           <i className="fa fa-hand-o-up" />
         </button>
@@ -55,7 +58,12 @@ class RankAndVote extends Component {
         return resBuffer;
       })
       .then(() => {})
-      .catch(console.log);
+      .catch((error)=>{
+        this.setState({
+            errors:error,
+            loading:false
+        });
+    });
   }
 
   downVote() {
@@ -67,7 +75,12 @@ class RankAndVote extends Component {
         return resBuffer;
       })
       .then(() => {})
-      .catch(console.log);
+      .catch((error)=>{
+        this.setState({
+            errors:error,
+            loading:false
+        });
+    });
   }
 }
 

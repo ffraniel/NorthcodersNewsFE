@@ -4,6 +4,7 @@ import LoadingComp from "../Other/LoadingComp";
 import ArticleComments from "./ArticleComments";
 import CommentForm from "./CommentForm";
 import PropTypes from 'prop-types';
+import Error from '../Other/Error';
 
 class Comment extends Component {
   constructor(props) {
@@ -13,7 +14,8 @@ class Comment extends Component {
       searchVal: "",
       loading: true,
       articleTitle: "",
-      artLoading: true
+      artLoading: true,
+      error:null
     };
     this.getComments = this.getComments.bind(this);
     this.addComment = this.addComment.bind(this);
@@ -27,6 +29,7 @@ class Comment extends Component {
   render() {
     return (
       <div className="commentsList">
+        {this.state.error && <Error error={this.state.error} />}
         {this.state.artLoading && <LoadingComp />}
         {!this.state.artLoading && <div><h1>{this.state.articleTitle}</h1> <button className="scrollCommentButton" onClick={scrollToCommenter}>Leave Comment</button></div>}
         {this.state.loading && <LoadingComp />}
@@ -58,7 +61,12 @@ class Comment extends Component {
           loading: false
         });
       })
-      .catch(console.log);
+      .catch((error)=>{
+        this.setState({
+            errors:error,
+            loading:false
+        });
+    });
   }
 
   addComment(comment, articleID) {
@@ -84,7 +92,12 @@ class Comment extends Component {
           comment: currentCommentState
         });
       })
-      .catch(console.log);
+      .catch((error)=>{
+        this.setState({
+            errors:error,
+            loading:false
+        });
+    });
   }
 
   deleteComment(comment) {
@@ -104,7 +117,12 @@ class Comment extends Component {
             comments:prevStateComments
         });
     })
-    .catch(console.log);
+    .catch((error)=>{
+      this.setState({
+          errors:error,
+          loading:false
+      });
+  });
   }
 
   getTitle(artID) {
@@ -120,7 +138,12 @@ class Comment extends Component {
           artLoading: false
         });
       })
-      .catch(console.log);
+      .catch((error)=>{
+        this.setState({
+            errors:error,
+            loading:false
+        });
+    });
   }
 }
 var currentCommentState;

@@ -2,13 +2,15 @@ import React, { Component } from "react";
 import "./TopicStrap.css";
 import LoadingComp from "../Other/LoadingComp";
 import TopicStrapIterator from "./TopicStrapIterator";
+import Error from '../Other/Error';
 
 class TopicStrap extends Component {
   constructor(props) {
     super(props);
     this.state = {
       topics: [],
-      loading: true
+      loading: true,
+      error:null
     };
     this.getTopics = this.getTopics.bind(this);
   }
@@ -18,6 +20,7 @@ class TopicStrap extends Component {
   render() {
     return (
       <div className="topicStrap">
+        {this.state.error && <Error error={this.state.error} />}
         {this.state.loading && <LoadingComp />}
         {!this.state.loading && (
           <TopicStrapIterator topics={this.state.topics} />
@@ -35,6 +38,12 @@ class TopicStrap extends Component {
         this.setState({
           topics: res.topics,
           loading: false
+        });
+      })
+      .catch((error) => {
+        this.setState({
+          error:error,
+          loading:false
         });
       });
   }

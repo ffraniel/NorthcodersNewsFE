@@ -3,6 +3,7 @@ import './TopicArticles.css';
 import LoadingComp from '../Other/LoadingComp';
 import ListItems from '../Articles/ListItems';
 import PropTypes from 'prop-types';
+import Error from '../Other/Error';
 
 class TopicArticles extends Component {
     constructor(props) {
@@ -10,7 +11,8 @@ class TopicArticles extends Component {
         this.state = ({
             posts:[],
             searchVal:'',
-            loading:true
+            loading:true,
+            error:null
         });
         this.getTopicArticles = this.getTopicArticles.bind(this);
     }
@@ -30,6 +32,7 @@ class TopicArticles extends Component {
     render () {
         return (
             <div className="topicArticlesList">
+                    {this.state.error && <Error error={this.state.error} />}
                     {this.state.loading && <LoadingComp />}
                     {!this.state.loading && <ListItems posts={this.state.posts}/>}
             </div>
@@ -47,7 +50,12 @@ class TopicArticles extends Component {
                 loading:false,                
             });
         })
-        .catch(console.log);
+        .catch((error)=>{
+            this.setState({
+                error:error,
+                loading:false
+            });
+        });
     }
 }
 
