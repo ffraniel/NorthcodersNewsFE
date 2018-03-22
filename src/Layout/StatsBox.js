@@ -30,7 +30,7 @@ class StatsBox extends Component {
                     <div className="posterDiv">
                         <p className="posterName">Today's poster of the day is </p>
                         <img className="posterImage" src={this.state.avatar} alt="profile of poster of the day" />
-                        <NavLink  to={`/users/${this.state.posterOfTheDay.name}`}>
+                        <NavLink  to={`/users/${this.state.posterOfTheDay.username}`}>
                             <p className="posterName">{this.state.posterOfTheDay.name}</p>
                         </NavLink>
                     </div>
@@ -59,8 +59,14 @@ class StatsBox extends Component {
                   });
               }
           })
-          .catch(console.log);
-      }
+          .catch((error) => {
+            this.setState({
+                errors:error,
+                loading:false
+            });
+        });
+    }
+
     getPosterOfTheDay() {
         return fetch(`http://localhost:3000/api/users`)
         .then((resbuffer)=>{
@@ -77,6 +83,12 @@ class StatsBox extends Component {
                     posterOfTheDay:poster,
                     avatar:poster.avatar_url
                 });
+        })
+        .catch((error) => {
+            this.setState({
+                errors:error,
+                loading:false
+            });
         });
     }
 }
