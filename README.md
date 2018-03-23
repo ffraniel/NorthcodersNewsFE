@@ -39,7 +39,7 @@ Change directory into the folder and install all dependencies using the followin
 
 ```npm install```
 
-Once the depedencies are installed you can launch the app. It is currently configured to connect to my own RESTful api hosted on Heroku. Should you wish to change the back end it will be necessary to amend the api routes used by the various fetch methods in:
+Once the depedencies are installed you can launch the app. It is currently configured to connect to my own RESTful api hosted on Heroku. Should you wish to change it to connect to a locally hosted back end it will be necessary to amend the fetch URLs  in:
 
 Article.js  
 List.js  
@@ -51,14 +51,25 @@ TopicArticles.js
 TopicStrap.js  
 Profile.js  
 
+Switch 
+
+```https://vast-tundra-92428.herokuapp.com```
+
+to 
+
+```http://localhost:3000```
 
 ### Running the App
 
-To run the app open your terminal and type:
+To run the dev version of the app locally switch the fetch URLs to connect to the localhost option above. Then open your terminal and type:
+
+```npm run dev```
+
+This will run the project on localhost:3000.
+
+To run the production app make sure you change the fetch URLs to connect to the online back end at the 'vast-tundra' option above. This version doesn't specify a port number allowing Heroku to set the number via local environment variables. Open your terminal and type:
 
 ```npm start```
-
-This will run the This will run the project on localhost:3000.  
 
 ### Deployment
 
